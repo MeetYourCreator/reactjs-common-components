@@ -1,0 +1,13 @@
+.splitView {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.divider {
+  width: 2px;
+  height: 100%;
+  margin: 2px;
+  border: 7px solid black;
+}
