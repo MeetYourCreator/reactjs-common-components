@@ -37,13 +37,13 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
 
   const splitPanelRef = createRef<HTMLDivElement>();
 
-  const onMouseDown = (e: React.MouseEvent) => {
-    setSeparatorXPosition(e.clientX);
+  const onTouchStart = (e: React.TouchEvent) => {
+    setSeparatorXPosition(e.touches[0].clientX);
     setIsDragging(true);
   };
 
-  const onTouchStart = (e: React.TouchEvent) => {
-    setSeparatorXPosition(e.touches[0].clientX);
+  const onMouseDown = (e: React.MouseEvent) => {
+    setSeparatorXPosition(e.clientX);
     setIsDragging(true);
   };
 
@@ -66,6 +66,19 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
       }
       setLeftWidth(newLeftWidth);
     }
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    onMove(e.touches[0].clientX);
+  };
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    e.preventDefault();
+    onMove(e.clientX);
+  };
+
+  const onMouseUp = () => {
+    setIsDragging(false);
   };
 
   return (
