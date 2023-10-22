@@ -68,11 +68,11 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
     }
   };
 
-  const onTouchMove = (e: React.TouchEvent) => {
+  const onTouchMove = (e: TouchEvent) => {
     onMove(e.touches[0].clientX);
   };
 
-  const onMouseMove = (e: React.MouseEvent) => {
+  const onMouseMove = (e: MouseEvent) => {
     e.preventDefault();
     onMove(e.clientX);
   };
@@ -81,12 +81,31 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
     setIsDragging(false);
   };
 
+  useEffect(() => {
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('touchmove', onTouchMove);
+    document.addEventListener('mouseup', onMouseUp);
+
+    return () => {
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('touchmove', onTouchMove);
+      document.removeEventListener('mouseup', onMouseUp);
+    };
+  });
+
   return (
-    <section className="splitView">
+    <section className={`splitView ${className ?? ''}`} ref={splitPanelRef}>
       <LeftPanel leftWidth={leftWidth} setLeftWidth={setLeftWidth}>
         {leftPanel}
       </LeftPanel>
-      <div className="divider" />
+      <div
+        className="divider-hitbox"
+        onMouseDown={onMouseDown}
+        onTouchStart={onTouchStart}
+        onMouseUp={onMouseUp}
+      >
+        <div className="divider" />
+      </div>
       <div className="rightPanel">{rightPanel}</div>
     </section>
   );
