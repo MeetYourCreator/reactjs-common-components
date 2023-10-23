@@ -1,7 +1,7 @@
 import React, { createRef, useEffect, useState } from 'react';
 import { SplitViewPanelsProps, LeftPanelProps } from './types';
 
-import './styles/split-view-panels.css';
+import './split-view-panels.css';
 
 const LeftPanel: React.FunctionComponent<LeftPanelProps> = ({
   leftWidth,
@@ -33,7 +33,7 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
     undefined | number
   >(undefined);
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const minLeftPanelWidth: number = 375;
+  const minLeftPanelWidth: number = 75;
   const splitPanelRef = createRef<HTMLDivElement>();
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -97,13 +97,19 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
       <LeftPanel leftWidth={leftWidth} setLeftWidth={setLeftWidth}>
         {leftPanel}
       </LeftPanel>
-      <div
-        className="divider-hitbox"
-        onMouseDown={onMouseDown}
-        onTouchStart={onTouchStart}
-        onMouseUp={onMouseUp}
-      >
-        <div className="divider" />
+      <div className="dividerContainer">
+        <div
+          className="dividerHitbox"
+          onMouseDown={onMouseDown}
+          onTouchStart={onTouchStart}
+          onMouseUp={onMouseUp}
+        >
+          <div className="divider">
+            <div>::</div>
+            <div>::</div>
+            <div>::</div>
+          </div>
+        </div>
       </div>
       <div className="rightPanel">{rightPanel}</div>
     </section>
