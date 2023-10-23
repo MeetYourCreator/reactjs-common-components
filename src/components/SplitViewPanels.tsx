@@ -1,14 +1,13 @@
 import React, { createRef, useEffect, useState } from 'react';
-import { SplitViewPanelsProps } from './types';
+import { SplitViewPanelsProps, LeftPanelProps } from './types';
 
 import './styles/split-view-panels.css';
 
-const minWidth = 75;
-const LeftPanel: React.FunctionComponent<{
-  leftWidth: number | undefined;
-  setLeftWidth: (value: number) => void;
-  children: any;
-}> = ({ leftWidth, setLeftWidth, children }) => {
+const LeftPanel: React.FunctionComponent<LeftPanelProps> = ({
+  leftWidth,
+  setLeftWidth,
+  children,
+}) => {
   const leftPanelRef = createRef<HTMLDivElement>();
 
   useEffect(() => {
@@ -34,7 +33,7 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
     undefined | number
   >(undefined);
   const [isDragging, setIsDragging] = useState<boolean>(false);
-
+  const minLeftPanelWidth: number = 375;
   const splitPanelRef = createRef<HTMLDivElement>();
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -52,15 +51,15 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
       const newLeftWidth = leftWidth + clientX - separatorXPosition;
       setSeparatorXPosition(clientX);
 
-      if (newLeftWidth < minWidth) {
-        setLeftWidth(minWidth);
+      if (newLeftWidth < minLeftPanelWidth) {
+        setLeftWidth(minLeftPanelWidth);
         return;
       }
 
       if (splitPanelRef.current) {
         const splitPanelWidth = splitPanelRef.current.clientWidth;
-        if (newLeftWidth > splitPanelWidth - minWidth) {
-          setLeftWidth(splitPanelWidth - minWidth);
+        if (newLeftWidth > splitPanelWidth - minLeftPanelWidth) {
+          setLeftWidth(splitPanelWidth - minLeftPanelWidth);
           return;
         }
       }
