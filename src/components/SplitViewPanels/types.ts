@@ -3,3 +3,9 @@ export interface SplitViewPanelsProps {
   rightPanel: React.ReactElement;
   className?: string;
 }
+
+export type LeftPanelProps = {
+  leftWidth: number | undefined;
+  setLeftWidth: (value: number) => void;
+  children: any;
+};
