@@ -81,13 +81,13 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
   };
 
   useEffect(() => {
-    document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('touchmove', onTouchMove);
+    document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
 
     return () => {
-      document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('touchmove', onTouchMove);
+      document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseup', onMouseUp);
     };
   });
@@ -97,18 +97,16 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
       <LeftPanel leftWidth={leftWidth} setLeftWidth={setLeftWidth}>
         {leftPanel}
       </LeftPanel>
-      <div className="dividerContainer">
-        <div
-          className="dividerHitbox"
-          onMouseDown={onMouseDown}
-          onTouchStart={onTouchStart}
-          onMouseUp={onMouseUp}
-        >
-          <div className="divider">
-            <div>:::</div>
-            <div>:::</div>
-            <div>:::</div>
-          </div>
+      <div
+        className="dividerHitbox"
+        onMouseDown={onMouseDown}
+        onTouchStart={onTouchStart}
+        onMouseUp={onMouseUp}
+      >
+        <div className="divider">
+          <div>:::</div>
+          <div>:::</div>
+          <div>:::</div>
         </div>
       </div>
       <div className="rightPanel">{rightPanel}</div>
