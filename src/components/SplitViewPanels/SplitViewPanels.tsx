@@ -105,9 +105,9 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
           onMouseUp={onMouseUp}
         >
           <div className="divider">
-            <div>::</div>
-            <div>::</div>
-            <div>::</div>
+            <div>:::</div>
+            <div>:::</div>
+            <div>:::</div>
           </div>
         </div>
       </div>

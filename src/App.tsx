@@ -6,24 +6,8 @@ export const App = () => {
   return (
     <>
       <SplitViewPanels
-        leftPanel={
-          <div style={{ backgroundColor: 'yellow' }}>
-            <div>Left</div>
-            <div>Left</div>
-            <div>Left</div>
-            <div>Left</div>
-            <div>Left</div>
-            <div>Left</div>
-            <div>Left</div>
-            <div>Left</div>
-          </div>
-        }
-        rightPanel={
-          <div style={{ backgroundColor: 'grey' }}>
-            <div>Right Right</div>
-            <div>Right</div>
-          </div>
-        }
+        leftPanel={<div>Left Panel Content</div>}
+        rightPanel={<div>Right Panel Content</div>}
       />
     </>
   );
