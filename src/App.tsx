@@ -6,11 +6,13 @@ import './App.css';
 export const App = () => {
   return (
     <>
-      <SplitViewPanels
-        leftPanel={<div>Left Panel Content</div>}
-        rightPanel={<div>Right Panel Content</div>}
-      />
-      <Modal />
+      <section style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+        <SplitViewPanels
+          leftPanel={<div>Left Panel Content</div>}
+          rightPanel={<div>Right Panel Content</div>}
+        />
+        <Modal />
+      </section>
     </>
   );
 };
