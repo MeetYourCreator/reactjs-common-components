@@ -6,3 +6,9 @@
   height: 100px;
   background-color: aquamarine;
 }
+
+.showModalBtn {
+  width: 100px;
+  height: 15px;
+  background-color: slategray;
+}

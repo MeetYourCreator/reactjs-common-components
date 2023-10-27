@@ -10,7 +10,7 @@ export const ModalContainer: React.FunctionComponent = () => {
 
   return (
     <div>
-      <button onClick={() => setIsModalOpen(true)} />
+      <button className='showModalBtn' onClick={() => setIsModalOpen(true)} />
       {isModalOpen && <ModalPresentational onClose={handleCloseModal} />}
     </div>
   );
