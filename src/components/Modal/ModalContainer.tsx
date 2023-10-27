@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useBoolean } from '../useBoolean';
 import { ModalPresentational } from './ModalPresentational';
 
 export const ModalContainer: React.FunctionComponent = () => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+  const { isValue, setIsTrue, setIsFalse } = useBoolean();
 
   return (
     <div>
-      <button className="showModalBtn" onClick={() => setIsModalOpen(true)} />
-      {isModalOpen && <ModalPresentational setIsModalOpen={setIsModalOpen} />}
+      <button className="showModalBtn" onClick={setIsTrue} />
+      {isValue && <ModalPresentational setIsModalOpen={setIsFalse} />}
     </div>
   );
 };
