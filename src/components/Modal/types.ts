@@ -1,7 +1,8 @@
 export interface ModalPresentationalProps {
-  onClose: () => void;
+  onClose?: () => void;
   isModalOpen?: boolean;
   hasCloseBtn?: boolean;
   children?: React.ReactNode;
   modalRef?: any;
+  setIsModalOpen: (isModalOpen: boolean) => void;
 }

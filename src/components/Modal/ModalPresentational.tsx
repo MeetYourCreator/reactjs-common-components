@@ -1,14 +1,18 @@
 import React from 'react';
+
+import { useIsModalOpen } from './useIsModalOpen';
+
 import { ModalPresentationalProps } from './types';
+
 import './modal.css';
 
 export const ModalPresentational: React.FunctionComponent<
   ModalPresentationalProps
-> = ({ onClose }) => {
+> = ({ setIsModalOpen }) => {
   return (
     <div className="modalContainer">
       <h1>Modal</h1>
-      <button onClick={onClose}>Close</button>
+      <button onClick={() => setIsModalOpen(false)}>Close</button>
     </div>
   );
 };
