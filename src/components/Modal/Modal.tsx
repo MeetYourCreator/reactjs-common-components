@@ -1,6 +1,6 @@
 import React from 'react';
 import { ModalPresentationalProps } from './types';
-import './modal.css';
+import './styles.css';
 
 export const Modal: React.FunctionComponent<ModalPresentationalProps> = ({
   setIsModalOpen,
