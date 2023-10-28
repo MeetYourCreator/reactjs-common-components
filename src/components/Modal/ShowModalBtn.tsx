@@ -9,7 +9,7 @@ export const ShowModalBtn: React.FunctionComponent<ShowModalBtnProps> = ({
   const { isValue, setIsTrue, setIsFalse } = useBoolean();
 
   return (
-    <div>
+    <div className="screenContainer">
       <button className="showModalBtn" onClick={setIsTrue}>
         {btnName}
       </button>
