@@ -93,23 +93,25 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
   });
 
   return (
-    <section className={`splitView ${className ?? ''}`} ref={splitPanelRef}>
-      <LeftPanel leftWidth={leftWidth} setLeftWidth={setLeftWidth}>
-        {leftPanel}
-      </LeftPanel>
-      <div
-        className="dividerHitbox"
-        onMouseDown={onMouseDown}
-        onTouchStart={onTouchStart}
-        onMouseUp={onMouseUp}
-      >
-        <div className="divider">
-          <div>:::</div>
-          <div>:::</div>
-          <div>:::</div>
+    <div className="screenContainer">
+      <section className={`splitView ${className ?? ''}`} ref={splitPanelRef}>
+        <LeftPanel leftWidth={leftWidth} setLeftWidth={setLeftWidth}>
+          {leftPanel}
+        </LeftPanel>
+        <div
+          className="dividerHitbox"
+          onMouseDown={onMouseDown}
+          onTouchStart={onTouchStart}
+          onMouseUp={onMouseUp}
+        >
+          <div className="divider">
+            <div>:::</div>
+            <div>:::</div>
+            <div>:::</div>
+          </div>
         </div>
-      </div>
-      <div className="rightPanel">{rightPanel}</div>
-    </section>
+        <div className="rightPanel">{rightPanel}</div>
+      </section>
+    </div>
   );
 };
