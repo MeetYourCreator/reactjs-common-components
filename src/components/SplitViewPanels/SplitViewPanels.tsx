@@ -19,7 +19,6 @@ const LeftPanel: React.FunctionComponent<LeftPanelProps> = ({
       leftPanelRef.current.style.width = `${leftWidth}px`;
     }
   }, [leftWidth, setLeftWidth, leftPanelRef]);
-
   return <div ref={leftPanelRef}>{children}</div>;
 };
 
