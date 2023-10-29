@@ -7,7 +7,11 @@ export const Modal: React.FunctionComponent<ModalPresentationalProps> = ({
 }) => {
   return (
     <div className="modalContainer">
-      <h1>Modal</h1>
+      <header className="modalHeader">
+        <h2 className="modaleHeaderTitle">Title</h2>
+      </header>
+      <main>Modal Content</main>
+      <footer className="modalFooter"></footer>
       <button onClick={setIsModalOpen}>Close</button>
     </div>
   );

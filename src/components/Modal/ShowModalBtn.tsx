@@ -11,9 +11,11 @@ export const ShowModalBtn: React.FunctionComponent<ShowModalBtnProps> = ({
 
   return (
     <div className="screenContainer">
-      <button className="showModalBtn" onClick={setIsVisible}>
-        {btnName}
-      </button>
+      <section className="showModalBtnContainer">
+        <button className="showModalBtn" onClick={setIsVisible}>
+          {btnName}
+        </button>
+      </section>
       {isValue && <Modal setIsModalOpen={setIsFalse} />}
     </div>
   );

@@ -3,13 +3,10 @@
   border-bottom: 3px solid black;
 }
 
-.modalContainer {
+.showModalBtnContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 100px;
-  height: 100px;
-  background-color: aquamarine;
+  justify-content: center;
+  align-items: center;
 }
 
 .showModalBtn {
@@ -18,4 +15,14 @@
   border: 1px solid slategray;
   border-radius: 4px;
   background-color: transparent;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 150px;
+  background-color: aquamarine;
 }
