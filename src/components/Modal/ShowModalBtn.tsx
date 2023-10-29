@@ -7,11 +7,11 @@ import './styles.css';
 export const ShowModalBtn: React.FunctionComponent<ShowModalBtnProps> = ({
   btnName,
 }) => {
-  const { isValue, setIsTrue, setIsFalse } = useBoolean();
+  const { isValue, setIsVisible, setIsFalse } = useBoolean();
 
   return (
     <div className="screenContainer">
-      <button className="showModalBtn" onClick={setIsTrue}>
+      <button className="showModalBtn" onClick={setIsVisible}>
         {btnName}
       </button>
       {isValue && <Modal setIsModalOpen={setIsFalse} />}

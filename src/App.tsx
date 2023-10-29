@@ -6,10 +6,7 @@ import './App.css';
 export const App = () => {
   return (
     <>
-      <section
-        className="appContainer"
-        // style={{ display: 'flex', justifyContent: 'space-evenly' }}
-      >
+      <section className="appContainer">
         <SplitViewPanels
           leftPanel={<div>Left Panel Content</div>}
           rightPanel={<div>Right Panel Content</div>}

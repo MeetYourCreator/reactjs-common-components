@@ -5,5 +5,7 @@ export interface UseBooleanOutput {
   setIsValue: Dispatch<SetStateAction<boolean>>;
   setIsTrue: () => void;
   setIsFalse: () => void;
+  setIsVisible: () => void;
+  setIsHidden: () => void;
   toggle: () => void;
 }
