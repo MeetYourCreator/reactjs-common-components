@@ -1,3 +1,3 @@
-export interface InputWithSearchFilterProps {
-  propName: any;
+export interface formDataProps {
+  searchValue: string;
 }
