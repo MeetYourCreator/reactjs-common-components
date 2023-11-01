@@ -8,7 +8,16 @@ export const SearchBar = () => {
     searchValue: '',
   });
 
-  const placeholderArray: Array<string> = ['cat', 'dog', 'hello'];
+  const placeholderArray: Array<string> = [
+    'cat',
+    'california',
+    'dog',
+    'orange',
+    'red',
+    'hello',
+    'hey',
+    'hippo',
+  ];
   console.log('inputField: ', inputField);
   console.log('formData.searchValue: ', formData, formData.searchValue);
 
