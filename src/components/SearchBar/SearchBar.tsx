@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from 'react';
+import { filterSearch, placeholderArray } from './utils';
 import { formDataProps } from './types';
 import './styles.css';
 
@@ -8,16 +9,6 @@ export const SearchBar = () => {
     searchValue: '',
   });
 
-  const placeholderArray: Array<string> = [
-    'cat',
-    'california',
-    'dog',
-    'orange',
-    'red',
-    'hello',
-    'hey',
-    'hippo',
-  ];
   console.log('inputField: ', inputField);
   console.log('formData.searchValue: ', formData, formData.searchValue);
 
@@ -25,14 +16,6 @@ export const SearchBar = () => {
     e.preventDefault();
     setFormData({ searchValue: inputField });
     setInputField('');
-  };
-
-  const filterSearch = (text: string, values: Array<string>) => {
-    console.log(
-      'values.includes(text.toLowerCase())',
-      values.includes(text.toLowerCase())
-    );
-    return values.includes(text.toLowerCase());
   };
 
   return (
