@@ -1,6 +1,6 @@
 export interface inputFieldProps {
   query: string;
-  list?: Array<any>;
+  queries?: Array<any>;
 }
 
 export interface formDataProps {
