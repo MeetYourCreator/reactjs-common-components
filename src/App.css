@@ -1,9 +1,18 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
 }
 
-input:focus {
-  outline: none;
+input {
+  width: 150px;
+  border: none;
 }
 
 .appContainer {

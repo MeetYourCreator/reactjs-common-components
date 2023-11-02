@@ -4,3 +4,15 @@
   text-decoration: none;
   background-color: green;
 }
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  border: none;
+  background-color: #ffffff;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

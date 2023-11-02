@@ -10,7 +10,7 @@ export const SearchBar = () => {
     queries: [],
   });
   const [formData, setFormData] = useState<formDataProps>({
-    searchValue: '',
+    searchValue: inputField.query,
   });
 
   console.log('inputField: ', inputField);
@@ -35,11 +35,24 @@ export const SearchBar = () => {
 
   return (
     <form className="formContainer" onSubmit={handleSubmit}>
+      <label htmlFor={inputField.query}></label>
       <input
+        type="select"
         className="searchBar"
         value={inputField.query}
         onChange={handleChange}
       />
+      <select name="dropdown" className="dropdown">
+        {inputField.query !== ''
+          ? inputField.queries?.map((query, id) => {
+              return (
+                <option style={{ fontSize: '10px' }} value={query} id={`${id}`}>
+                  {query}
+                </option>
+              );
+            })
+          : inputField.query}
+      </select>
     </form>
   );
 };
