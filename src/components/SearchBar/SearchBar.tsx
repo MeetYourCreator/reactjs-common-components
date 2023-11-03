@@ -42,15 +42,19 @@ export const SearchBar = () => {
         value={inputField.query}
         onChange={handleChange}
       />
-      <div className="dropdown">
-        {inputField.queries?.map((query) => {
-          return (
-            <ul>
-              <li onClick={() => setInputField({ query: query })}>{query}</li>
-            </ul>
-          );
-        })}
-      </div>
+      {inputField.query === '' ? (
+        inputField.query
+      ) : (
+        <div className="dropdown">
+          {inputField.queries?.map((query) => {
+            return (
+              <ul>
+                <li onClick={() => setInputField({ query: query })}>{query}</li>
+              </ul>
+            );
+          })}
+        </div>
+      )}
     </form>
   );
 };
