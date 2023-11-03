@@ -42,17 +42,27 @@ export const SearchBar = () => {
         value={inputField.query}
         onChange={handleChange}
       />
-      <select name="dropdown" className="dropdown">
-        {inputField.query !== ''
-          ? inputField.queries?.map((query, id) => {
-              return (
-                <option style={{ fontSize: '10px' }} value={query} id={`${id}`}>
-                  {query}
-                </option>
-              );
-            })
-          : inputField.query}
-      </select>
+      {inputField.query && (
+        <select
+          name="dropdown"
+          className="dropdown"
+          onChange={(e) => setInputField({ query: e.target.value })}
+        >
+          {inputField.query !== ''
+            ? inputField.queries?.map((query, id) => {
+                return (
+                  <option
+                    style={{ fontSize: '10px' }}
+                    value={query}
+                    id={`${id}`}
+                  >
+                    {query}
+                  </option>
+                );
+              })
+            : inputField.query}
+        </select>
+      )}
     </form>
   );
 };
