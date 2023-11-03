@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { placeholderArray } from './utils';
 import { inputFieldProps, formDataProps } from './types';
 import './styles.css';
@@ -42,27 +42,15 @@ export const SearchBar = () => {
         value={inputField.query}
         onChange={handleChange}
       />
-      {inputField.query && (
-        <select
-          name="dropdown"
-          className="dropdown"
-          onChange={(e) => setInputField({ query: e.target.value })}
-        >
-          {inputField.query !== ''
-            ? inputField.queries?.map((query, id) => {
-                return (
-                  <option
-                    style={{ fontSize: '10px' }}
-                    value={query}
-                    id={`${id}`}
-                  >
-                    {query}
-                  </option>
-                );
-              })
-            : inputField.query}
-        </select>
-      )}
+      <div className="dropdown">
+        {inputField.queries?.map((query) => {
+          return (
+            <ul>
+              <li onClick={() => setInputField({ query: query })}>{query}</li>
+            </ul>
+          );
+        })}
+      </div>
     </form>
   );
 };
