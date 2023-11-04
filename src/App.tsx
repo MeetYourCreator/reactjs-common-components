@@ -2,6 +2,7 @@ import React from 'react';
 import { SplitViewPanels } from './components/SplitViewPanels/index';
 import { ShowModalBtn } from './components/Modal/index';
 import { SearchBar } from './components/SearchBar';
+import { List } from './components/List';
 import './App.css';
 
 export const App = () => {
@@ -14,6 +15,7 @@ export const App = () => {
         />
         <ShowModalBtn btnName={'Submit'} />
         <SearchBar />
+        <List />
       </section>
     </>
   );
