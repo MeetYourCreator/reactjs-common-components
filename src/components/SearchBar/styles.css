@@ -8,8 +8,12 @@
 .dropdown {
   display: flex;
   flex-direction: column;
+  /* position: relative;
+  top: 5px; */
   width: 150px;
+  padding: 1px 2px;
   border: none;
+  font-size: 10px;
   background-color: #ffffff;
   overflow: hidden;
   -webkit-appearance: none;
