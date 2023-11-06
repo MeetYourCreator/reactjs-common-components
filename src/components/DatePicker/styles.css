@@ -1,15 +1,14 @@
-.datePickerContainer {
+.calendarContainer {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(6, 120px);
+  grid-template-rows: repeat(5, 120px);
   column-gap: 1px;
   row-gap: 1px;
+  border: 1px solid pink;
   background-color: pink;
 }
-.date {
+.calendarDate {
+  padding: 5px 0 0 5px;
+  font-size: 1em;
   background-color: white;
 }
-
-/* .date:nth-child(even) {
-  border: 1px solid black;
-} */

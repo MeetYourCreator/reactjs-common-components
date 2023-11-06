@@ -8,10 +8,12 @@ export const datePlaceholderArray: Array<number> = [
 ];
 
 export const DatePicker = () => {
+  const date = new Date();
+  console.log(date);
   return (
-    <div className="datePickerContainer">
+    <div className="calendarContainer">
       {datePlaceholderArray.map((date) => {
-        return <div className="date">{date}</div>;
+        return <div className="calendarDate">{date}</div>;
       })}
     </div>
   );
