@@ -1,14 +1,23 @@
-.calendarContainer {
+.calendarHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  padding: 5px 0px;
+  margin: 0px 0px -5px 0px;
+  background-color: #dcdbdb;
+}
+
+.calendarBody {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 120px);
-  column-gap: 1px;
-  row-gap: 1px;
-  border: 1px solid pink;
-  background-color: pink;
+  column-gap: 5px;
+  row-gap: 5px;
 }
-.calendarDate {
+
+.calendarDay {
   padding: 5px 0 0 5px;
   font-size: 1em;
+  border: 1px solid black;
   background-color: white;
 }
