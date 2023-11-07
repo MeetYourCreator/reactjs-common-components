@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Day } from './Day';
+import { Header } from './Header';
+import { useBoolean } from '../useBoolean';
 import { DatePickerProps } from './types';
 import './styles.css';
 
@@ -12,6 +14,8 @@ export const DatePicker = () => {
   const [nav, setNav] = useState<any>([]);
   const [days, setDays] = useState<Array<any>>([]);
   const [dateDisplay, setDateDisplay] = useState<string>('');
+
+  const { setIsTrue } = useBoolean();
 
   const weekdays = [
     'Sunday',
@@ -48,16 +52,6 @@ export const DatePicker = () => {
       `${date.toLocaleDateString('en-us', { month: 'long' })} ${year}`
     );
 
-    const weekdays = [
-      'Sunday',
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-    ];
-
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
     const daysArray = [];
@@ -83,6 +77,7 @@ export const DatePicker = () => {
 
   return (
     <>
+      <Header dateDisplay={dateDisplay} />
       <header className="calendarHeader">
         {weekdays.map((weekday) => {
           return <div>{weekday}</div>;
