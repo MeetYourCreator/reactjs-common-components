@@ -14,7 +14,7 @@ export const App = () => {
           leftPanel={<div>Left Panel Content</div>}
           rightPanel={<div>Right Panel Content</div>}
         />
-        <Modal btnName={'Submit'} />
+        <Modal btnName="Submit" />
         <SearchBar />
         <DatePicker />
         <List />

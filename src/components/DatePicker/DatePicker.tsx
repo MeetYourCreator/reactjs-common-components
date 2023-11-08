@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Day } from './Day';
 import { Header } from './Header';
 import { useBoolean } from '../useBoolean';
-import { DatePickerProps } from './types';
 import './styles.css';
 
 export const datePlaceholderArray: Array<number> = [
