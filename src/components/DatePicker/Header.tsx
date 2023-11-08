@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Button } from '../index';
 import { HeaderProps } from './types';
 import './styles.css';
 
@@ -7,8 +8,8 @@ export const Header = ({ dateDisplay }: HeaderProps) => {
     <header className="headerContainer">
       <div>{dateDisplay}</div>
       <div className="buttonContainer">
-        <button className="button">Back</button>
-        <button className="button">Forward</button>
+        <Button name="forward" />
+        <Button name="back" />
       </div>
     </header>
   );

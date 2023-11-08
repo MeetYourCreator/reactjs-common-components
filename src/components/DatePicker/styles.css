@@ -4,8 +4,10 @@
   align-items: center;
 }
 
-.button {
-  margin: 3px;
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 150px;
 }
 
 .calendarHeader {
