@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Day } from './Day';
 import { Header } from './Header';
-import { useBoolean } from '../useBoolean';
 import './styles.css';
 
 export const datePlaceholderArray: Array<number> = [
@@ -13,8 +12,6 @@ export const DatePicker = () => {
   const [nav, setNav] = useState<any>([]);
   const [days, setDays] = useState<Array<any>>([]);
   const [dateDisplay, setDateDisplay] = useState<string>('');
-
-  const { setIsTrue } = useBoolean();
 
   const weekdays = [
     'Sunday',
@@ -76,7 +73,11 @@ export const DatePicker = () => {
 
   return (
     <>
-      <Header dateDisplay={dateDisplay} />
+      <Header
+        dateDisplay={dateDisplay}
+        onNext={() => setNav(nav + 1)}
+        onBack={() => setNav(nav - 1)}
+      />
       <header className="calendarHeader">
         {weekdays.map((weekday) => {
           return <div>{weekday}</div>;
