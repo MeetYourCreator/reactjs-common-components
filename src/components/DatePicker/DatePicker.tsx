@@ -1,12 +1,13 @@
-import { useState } from 'react';
 import { Calendar } from '../index';
-
-// import './styles.css';
+import { useBoolean } from '../../hooks/useBoolean';
+import './styles.css';
 
 export const DatePicker = () => {
+  const { isValue, setIsVisible, setIsHidden } = useBoolean();
   return (
     <>
-      <Calendar />
+      <input onFocus={setIsVisible} onChange={setIsHidden} />
+      <div className="dropdownContainer">{isValue && <Calendar />}</div>
     </>
   );
 };

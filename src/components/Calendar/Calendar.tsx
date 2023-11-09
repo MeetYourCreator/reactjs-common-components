@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Day } from './Day';
 import { Header } from './Header';
+
 import { useDate } from '../../hooks/useDate';
 import './styles.css';
 
