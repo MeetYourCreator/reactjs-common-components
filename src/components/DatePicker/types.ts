@@ -6,3 +6,9 @@ export interface HeaderProps {
 export interface DayProps {
   date: any;
 }
+
+export interface DateObj {
+  date: string;
+  isCurrentDay: boolean;
+  value: string;
+}

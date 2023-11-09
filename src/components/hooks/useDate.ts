@@ -1,27 +1,10 @@
-import { useState, useEffect } from 'react';
-import { Day } from './Day';
-import { Header } from './Header';
-import { DateObj } from './types';
-import './styles.css';
+import { useEffect } from 'react';
+import { UseDateOutput } from '../types';
 
-export const DatePicker = () => {
-  const [nav, setNav] = useState<number>(0);
-  const [days, setDays] = useState<Array<any>>([]);
-  const [dateDisplay, setDateDisplay] = useState<string>('');
-
-  const weekdays = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
-
-  console.log(days);
+export const useDate = ({ nav, setDays, setDateDisplay }: UseDateOutput) => {
   useEffect(() => {
     const date = new Date();
+    console.log(date);
 
     if (nav !== 0) {
       date.setMonth(new Date().getMonth() + nav);
@@ -45,14 +28,24 @@ export const DatePicker = () => {
       `${date.toLocaleDateString('en-us', { month: 'long' })} ${year}`
     );
 
+    const weekdays = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ];
+
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
-    const daysArray: Array<DateObj> = [];
+    const daysArray = [];
     for (let i = 1; i <= paddingDays + daysInMonth; i++) {
       const dayString = `${month + 1}/${i - paddingDays}/${year}`;
       if (i > paddingDays) {
         daysArray.push({
-          value: (i - paddingDays).toString(),
+          value: i - paddingDays,
           isCurrentDay: i - paddingDays === day && nav === 0,
           date: dayString,
         });
@@ -66,25 +59,5 @@ export const DatePicker = () => {
     }
 
     setDays(daysArray);
-  }, [nav]);
-
-  return (
-    <>
-      <Header
-        dateDisplay={dateDisplay}
-        onNext={() => setNav(nav + 1)}
-        onBack={() => setNav(nav - 1)}
-      />
-      <header className="calendarHeader">
-        {weekdays.map((weekday) => {
-          return <div>{weekday}</div>;
-        })}
-      </header>
-      <div className="calendarBody">
-        {days.map((date, index) => {
-          return <Day key={index} date={date} />;
-        })}
-      </div>
-    </>
-  );
+  }, [nav, setDays, setDateDisplay]);
 };

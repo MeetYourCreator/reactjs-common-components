@@ -1,5 +1,5 @@
 import React from 'react';
-import { useBoolean } from '../useBoolean';
+import { useBoolean } from '../hooks/useBoolean';
 import { Modal } from './Modal';
 import { ShowModalBtnProps } from './types';
 import './styles.css';
