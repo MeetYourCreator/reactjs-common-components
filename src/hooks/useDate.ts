@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
-import { UseDateOutput } from '../types';
+import { useEffect, useState } from 'react';
 
-export const useDate = ({ nav, setDays, setDateDisplay }: UseDateOutput) => {
+export const useDate = (nav: number) => {
+  const [days, setDays] = useState<Array<any>>([]);
+  const [dateDisplay, setDateDisplay] = useState<string>('');
+
   useEffect(() => {
     const date = new Date();
-    console.log(date);
 
     if (nav !== 0) {
       date.setMonth(new Date().getMonth() + nav);
@@ -59,5 +60,10 @@ export const useDate = ({ nav, setDays, setDateDisplay }: UseDateOutput) => {
     }
 
     setDays(daysArray);
-  }, [nav, setDays, setDateDisplay]);
+  }, [nav]);
+
+  return {
+    days,
+    dateDisplay,
+  };
 };

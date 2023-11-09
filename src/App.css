@@ -21,3 +21,8 @@ input {
   grid-template-rows: 1fr 1fr;
   row-gap: 15px;
 }
+
+.screenContainer {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}

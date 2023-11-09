@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { UseBooleanOutput } from '../types';
+import { UseBooleanOutput } from './types';
 
 export const useBoolean = (initialValue?: boolean): UseBooleanOutput => {
   const [isValue, setIsValue] = useState(!!initialValue);

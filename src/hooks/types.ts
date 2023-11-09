@@ -8,9 +8,3 @@ export interface UseBooleanOutput {
   setIsHidden: () => void;
   toggle: () => void;
 }
-
-export interface UseDateOutput {
-  nav: number;
-  setDays: Dispatch<SetStateAction<any>>;
-  setDateDisplay: Dispatch<SetStateAction<any>>;
-}
