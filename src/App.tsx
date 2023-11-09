@@ -10,14 +10,24 @@ export const App = () => {
   return (
     <>
       <section className="appContainer">
-        <SplitViewPanels
-          leftPanel={<div>Left Panel Content</div>}
-          rightPanel={<div>Right Panel Content</div>}
-        />
-        <Modal btnName={'Submit'} />
-        <SearchBar />
-        <DatePicker />
-        <List />
+        <div className="screenContainer">
+          <SplitViewPanels
+            leftPanel={<div>Left Panel Content</div>}
+            rightPanel={<div>Right Panel Content</div>}
+          />
+        </div>
+        <div className="screenContainer">
+          <Modal btnName="Submit" />
+        </div>
+        <div className="screenContainer">
+          <SearchBar />
+        </div>
+        <div className="screenContainer">
+          <DatePicker />
+        </div>
+        <div className="screenContainer">
+          <List />
+        </div>
       </section>
     </>
   );
