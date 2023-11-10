@@ -5,10 +5,11 @@ export interface HeaderProps {
 }
 export interface DayProps {
   date: any;
+  onSelectedDate: any;
 }
 
 export interface DateObj {
-  date: string;
-  isCurrentDay: boolean;
   value: string;
+  isCurrentDay: boolean;
+  date: string;
 }
