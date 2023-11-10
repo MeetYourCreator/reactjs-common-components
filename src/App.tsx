@@ -1,4 +1,3 @@
-import React from 'react';
 import { SplitViewPanels } from './components/';
 import { Modal } from './components/';
 import { SearchBar } from './components/';
