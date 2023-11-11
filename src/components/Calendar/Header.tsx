@@ -7,8 +7,8 @@ export const Header = ({ dateDisplay, onBack, onNext }: HeaderProps) => {
     <header className="headerContainer">
       <div>{dateDisplay}</div>
       <div className="buttonContainer">
-        <Button name="back" onClick={onBack} />
-        <Button name="forward" onClick={onNext} />
+        <Button name="back" onClick={onBack} styles={{ color: 'orange' }} />
+        <Button name="forward" onClick={onNext} styles={{ color: 'orange' }} />
       </div>
     </header>
   );

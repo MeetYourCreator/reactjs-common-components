@@ -1,23 +1,31 @@
-.showModalBtnContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .showModalBtn {
+  position: absolute;
   width: 100px;
   height: 15px;
   border: 1px solid slategray;
   border-radius: 4px;
   background-color: transparent;
+  z-index: 0;
 }
 
 .modalContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100px;
   height: 150px;
-  background-color: aquamarine;
+  font-size: small;
+  color: #d0defa;
+  background-color: #07184a;
+  z-index: 10;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 30px;
+  width: 100%;
 }
