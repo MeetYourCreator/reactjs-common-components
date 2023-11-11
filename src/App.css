@@ -18,11 +18,39 @@ input {
 
 .appContainer {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  row-gap: 15px;
+  grid-template-rows: 4fr 1fr;
+  row-gap: 5px;
 }
 
 .screenContainer {
+  width: 50vw;
   border-top: 3px solid black;
-  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+}
+
+.panels {
+  grid-column-start: 0;
+  grid-column-end: three;
+}
+
+.datepicker {
+  grid-column-start: 3;
+  grid-column-end: five;
+  /* grid-row-start: 2;
+  grid-row-end: 3; */
+}
+
+.modal {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.searchBar {
+  grid-column-start: 0;
+  grid-column-end: three;
+}
+
+.list {
+  grid-column-start: 3;
+  grid-column-end: five;
 }
