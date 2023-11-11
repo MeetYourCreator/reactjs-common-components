@@ -1,14 +1,16 @@
-export interface HeaderProps {
+import { ComponentProps } from '../types';
+
+export interface HeaderProps extends ComponentProps {
   dateDisplay: string;
   onBack: () => void;
   onNext: () => void;
 }
-export interface DayProps {
+export interface DayProps extends ComponentProps {
   date: any;
   onSelectedDate: any;
 }
 
-export interface DateObj {
+export interface DateObj extends ComponentProps {
   value: string;
   isCurrentDay: boolean;
   date: string;

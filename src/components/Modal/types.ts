@@ -1,7 +1,9 @@
-export interface ModalPresentationalProps {
+import { ComponentProps } from '../types';
+
+export interface ModalPresentationalProps extends ComponentProps {
   setIsModalOpen: any;
 }
 
-export type ShowModalBtnProps = {
+export interface ShowModalBtnProps extends ComponentProps {
   btnName?: string;
-};
+}
