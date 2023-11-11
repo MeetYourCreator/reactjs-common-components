@@ -7,6 +7,8 @@
 .showModalBtn {
   width: 100px;
   height: 15px;
+  position: absolute;
+  z-index: 0;
   border: 1px solid slategray;
   border-radius: 4px;
   background-color: transparent;
@@ -19,5 +21,17 @@
   align-items: center;
   width: 100px;
   height: 150px;
-  background-color: aquamarine;
+  position: relative;
+  z-index: 10;
+  font-size: small;
+  color: #d0defa;
+  background-color: #07184a;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 30px;
+  width: 100%;
 }
