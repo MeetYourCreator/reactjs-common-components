@@ -1,9 +1,3 @@
-.showModalBtnContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .showModalBtn {
   width: 100px;
   height: 15px;

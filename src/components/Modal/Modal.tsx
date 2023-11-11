@@ -1,18 +1,19 @@
-import React from 'react';
-import { ModalPresentationalProps } from './types';
+import { Button } from '../Button/Button';
+import { ModalProps } from './types';
 import './styles.css';
 
-export const Modal: React.FunctionComponent<ModalPresentationalProps> = ({
+export const Modal: React.FunctionComponent<ModalProps> = ({
   setIsModalOpen,
+  header,
+  main,
 }) => {
   return (
     <div className="modalContainer">
-      <header className="modalHeader">
-        <h2 className="modaleHeaderTitle">Title</h2>
-      </header>
-      <main>Modal Content</main>
-      <footer className="modalFooter"></footer>
-      <button onClick={setIsModalOpen}>Close</button>
+      <header>{header}</header>
+      <main>{main}</main>
+      <div className="footer">
+        <Button onClick={setIsModalOpen} name="Close" />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,9 @@
 import { ComponentProps } from '../types';
 
-export interface ModalPresentationalProps extends ComponentProps {
+export interface ModalProps extends ComponentProps {
   setIsModalOpen: any;
+  header?: any;
+  main?: any;
 }
 
 export interface ShowModalBtnProps extends ComponentProps {
