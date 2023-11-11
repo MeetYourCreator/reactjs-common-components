@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { DateContext } from '../../DateContext';
+import { DateContext } from '../../context';
 import { Calendar } from '../index';
 import { useBoolean } from '../../hooks/useBoolean';
 import './styles.css';

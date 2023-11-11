@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { DateContext } from '../../DateContext';
+import { DateContext } from '../../context';
 import { Day } from './Day';
 import { Header } from './Header';
 import { useDate } from '../../hooks/useDate';
