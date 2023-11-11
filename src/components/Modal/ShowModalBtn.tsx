@@ -1,4 +1,4 @@
-import React from 'react';
+import { Button } from '../Button/Button';
 import { useBoolean } from '../../hooks/useBoolean';
 import { Modal } from './Modal';
 import { ShowModalBtnProps } from './types';
@@ -12,9 +12,11 @@ export const ShowModalBtn: React.FunctionComponent<ShowModalBtnProps> = ({
   return (
     <>
       <section>
-        <button className="showModalBtn" onClick={setIsVisible}>
-          {btnName}
-        </button>
+        <Button
+          onClick={setIsVisible}
+          name={btnName}
+          styles={{ position: 'absolute', zIndex: 0 }}
+        />
       </section>
       {isValue && (
         <Modal setIsModalOpen={setIsFalse} header="" main="Main Content" />
