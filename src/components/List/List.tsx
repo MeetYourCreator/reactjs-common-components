@@ -2,20 +2,6 @@ import { data } from './utils';
 import './styles.css';
 
 export const List = () => {
-  // const data = [
-  //   'abc',
-  //   'def',
-  //   { keyValue1: '', keyValue2: 333, keyValue4: [1, '234', 5] },
-  //   123,
-  //   [
-  //     9,
-  //     { a: 123, def: '888', ghi: { a: 456 } },
-  //     123,
-  //     'nx',
-  //     [123, '0', [{ e: 2, abc: { h: 91, l: { htw: '123' } } }]],
-  //   ],
-  // ];
-
   return (
     <div className="listContainer">
       {data.map((entry: any, index) => {
@@ -39,65 +25,65 @@ export const List = () => {
               </ul>
             );
           case 'object':
-            console.log('deepTraversal arrEntry:', entry);
+            //if the object is not an array
+            if (Array.isArray(entry) === false) {
+              console.log('object is not an array, object is:', entry);
+              return Object.entries(entry).map((obj: any) => {
+                console.log('object is :', obj[1], typeof obj[1]);
 
-            
-            if (Array.isArray(entry) === true) {
-              console.log('deepTraversal arrEntry:', entry);
-              return entry.map((arrEntry: any) => {
-                switch (typeof arrEntry) {
-                  case 'string':
-                    return (
-                      <ul>
-                        <li>{arrEntry}</li>
-                      </ul>
-                    );
-                  case 'number':
-                    return (
-                      <ul>
-                        <li>{arrEntry}</li>
-                      </ul>
-                    );
-                  case 'boolean':
-                    return (
-                      <ul>
-                        <li>{arrEntry}</li>
-                      </ul>
-                    );
-                  case 'object':
-                    (function deepTraversal(obj: any, index) {
-                      console.log('deepTraversal arrEntry:', obj);
-                      for (const key in obj) {
-                        console.log('deepTraversal arrEntry:', obj[key]);
-                        if (typeof obj[key] === 'object') {
-                          deepTraversal(obj[key]);
-                        } else {
-                          return (
-                            <ul>
-                              console.log('deepTraversal arrEntry:', obj[key])
-                              <li key={`${index}${key}`}>{obj[key]}</li>
-                            </ul>
-                          );
-                        }
+                if (typeof obj[1] === 'string') {
+                  console.log('string obj:', obj[1]);
+                  return (
+                    <ul>
+                      <li>{obj[1]}</li>
+                    </ul>
+                  );
+                } else if (typeof obj[1] === 'string') {
+                  return (
+                    <ul>
+                      <li>{obj}</li>
+                    </ul>
+                  );
+                } else if (typeof obj[1] === 'boolean') {
+                  return (
+                    <ul>
+                      <li>{obj}</li>
+                    </ul>
+                  );
+                } else if (typeof obj[1] === 'object') {
+                  (function deepTraversal(obj: any, index) {
+                    console.log('deepTraversal object is:', obj);
+                    for (const key in obj) {
+                      // console.log('deepTraversal object is:', obj);
+                      if (typeof obj[key] === 'object') {
+                        deepTraversal(obj[key]);
+                      } else {
+                        return (
+                          <ul>
+                            {/* console.log('deepTraversal arrEntry:', obj[key]) */}
+                            <li key={`${index}${key}`}>{obj[key]}</li>
+                          </ul>
+                        );
                       }
-                    })(arrEntry);
+                    }
+                  })(obj);
                 }
               });
             } else {
-              (function deepTraversal(obj: any, index) {
-                for (const key in obj) {
-                  if (typeof obj[key] === 'object') {
-                    deepTraversal(obj[key]);
-                  } else {
-                    return (
-                      <ul>
-                        console.log('deepTraversal entry:', obj[key])
-                        <li key={`${index}${key}`}>{obj[key]}</li>
-                      </ul>
-                    );
-                  }
-                }
-              })(entry);
+              // (function deepTraversal(obj: any, index) {
+              //   for (const key in obj) {
+              //     if (typeof obj[key] === 'object') {
+              //       deepTraversal(obj[key]);
+              //     } else {
+              //       return (
+              //         <ul>
+              //           console.log('deepTraversal entry:', obj[key])
+              //           <li key={`${index}${key}`}>{obj[key]}</li>
+              //         </ul>
+              //       );
+              //     }
+              //   }
+              // })(entry);
             }
         }
       })}
