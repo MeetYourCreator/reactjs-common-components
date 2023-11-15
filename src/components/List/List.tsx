@@ -51,6 +51,7 @@ export const List = () => {
 
                   Array.isArray(obj[1])
                     ? obj[1].map((el: any, index: number) => {
+                        console.log('el', Array.isArray(el));
                         return (
                           <ul>
                             <li key={index}>{el}</li>
