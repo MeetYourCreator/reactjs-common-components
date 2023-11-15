@@ -41,52 +41,53 @@ export const List = () => {
           case 'object':
             switch (Array.isArray(entry)) {
               case false:
-                Object.entries(entry).map((obj: any) =>
+                return Object.entries(entry).map((obj: any) =>
                   // console.log(
                   //   'obj[1]:',
                   //   obj[1],
                   //   typeof obj[1],
                   //   Array.isArray(obj[1])
                   // );
+                  {
+                    switch (Array.isArray(obj[1])) {
+                      //obj[1] is an object
+                      case false:
+                        console.log('obj[1]', obj[1]);
+                        if (typeof obj[1] !== 'object') {
+                          return (
+                            <>
+                              <ul>
+                                <li>{obj[1]}</li>
+                              </ul>
+                            </>
+                          );
+                        } else {
+                          console.log(typeof obj[1]);
+                        }
+                        // Object.entries(obj[1]).map((el: any, index: any) => {
+                        //   console.log('el', el[1]);
+                        //   return (
+                        //     <>
+                        //       <ul>
+                        //         <li key={index}>{el}</li>
+                        //       </ul>
+                        //     </>
+                        //   );
+                        // });
 
-                  Array.isArray(obj[1])
-                    ? obj[1].map((el: any, index: number) => {
-                        console.log('el', Array.isArray(el));
-                        return (
-                          <ul>
-                            <li key={index}>{el}</li>
-                          </ul>
-                        );
-                      })
-                    : console.log('no')
+                        //obj[1] is an array
+                        break;
+                      case true:
+
+                      // console.log('true', Array.isArray(obj[1]), obj[1]);
+                    }
+                  }
                 );
-                break;
+
               case true:
             }
-            //if the object is not an array
-            if (Array.isArray(entry) === false) {
-              return (function deepTraversal(entry: any) {
-                return Object.entries(entry).map((obj: any) => {
-                  if (typeof obj[1] === 'object') {
-                    deepTraversal(obj[1]);
-                  } else {
-                    return (
-                      <ul>
-                        <li>{obj[1]}</li>
-                      </ul>
-                    );
-                  }
-                });
-              })(entry);
-            } else {
-              return entry.map((obj: any) => {
-                return (
-                  <ul>
-                    <li>{obj[1]}</li>
-                  </ul>
-                );
-              });
-            }
+          //if the object is not an array
+
           //Goodup to this point 11/14
           //
           //
