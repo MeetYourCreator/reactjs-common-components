@@ -1,12 +1,9 @@
 import { Button } from '../Button/Button';
 import { useBoolean } from '../../hooks/useBoolean';
 import { Modal } from './Modal';
-import { ShowModalBtnProps } from './types';
 import './styles.css';
 
-export const ShowModalBtn: React.FunctionComponent<ShowModalBtnProps> = ({
-  btnName,
-}) => {
+export const ShowModalBtn = () => {
   const { isValue, setIsVisible, setIsFalse } = useBoolean();
 
   return (
@@ -14,12 +11,16 @@ export const ShowModalBtn: React.FunctionComponent<ShowModalBtnProps> = ({
       <section>
         <Button
           onClick={setIsVisible}
-          name={btnName}
+          name="Open Modal"
           styles={{ position: 'absolute', zIndex: 0 }}
         />
       </section>
       {isValue && (
-        <Modal setIsModalOpen={setIsFalse} header="" main="Main Content" />
+        <Modal
+          setIsModalOpen={setIsFalse}
+          header="Modal Title"
+          main="Supporting Content"
+        />
       )}
     </>
   );

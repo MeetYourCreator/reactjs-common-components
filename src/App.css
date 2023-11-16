@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 
+html {
+  font-size: 100%;
+}
+
 a {
   text-decoration: none;
 }

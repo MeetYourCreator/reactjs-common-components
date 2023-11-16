@@ -19,7 +19,7 @@ export const App = () => {
           <DatePicker />
         </div>
         <div className="screenContainer modal">
-          <Modal btnName="Submit" />
+          <Modal />
         </div>
         <div className="screenContainer searchBar">
           <SearchBar />

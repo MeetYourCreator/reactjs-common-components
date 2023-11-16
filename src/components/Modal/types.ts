@@ -5,7 +5,3 @@ export interface ModalProps extends ComponentProps {
   header?: any;
   main?: any;
 }
-
-export interface ShowModalBtnProps extends ComponentProps {
-  btnName?: string;
-}
