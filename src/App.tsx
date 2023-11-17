@@ -3,6 +3,7 @@ import { Modal } from './components/';
 import { SearchBar } from './components/';
 import { DatePicker } from './components';
 import { List } from './components/';
+import { Toggle } from './components';
 import './App.css';
 
 export const App = () => {
@@ -26,6 +27,9 @@ export const App = () => {
         </div>
         <div className="screenContainer list">
           <List />
+        </div>
+        <div className="screenContainer">
+          <Toggle />
         </div>
       </section>
     </>
