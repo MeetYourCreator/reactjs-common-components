@@ -1,22 +1,16 @@
-.formContainer {
-  padding: 5px;
-  margin: 10px;
-  text-decoration: none;
-  background-color: green;
-}
-
 .dropdown {
   display: flex;
   flex-direction: column;
-  /* position: relative;
-  top: 5px; */
-  width: 149px;
-  padding-left: 2px;
+  width: 150px;
   border: none;
-  font-size: 10px;
-  background-color: #ffffff;
+  font-size: 50%;
+  background-color: #9b9999;
   overflow: hidden;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.dropdownOption {
+  padding: 3px 0px 3px 2px;
 }
