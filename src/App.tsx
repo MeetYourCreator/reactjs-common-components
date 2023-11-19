@@ -28,7 +28,7 @@ export const App = () => {
         <div className="screenContainer list">
           <List />
         </div>
-        <div className="screenContainer">
+        <div className="screenContainer toggle">
           <Toggle />
         </div>
       </section>

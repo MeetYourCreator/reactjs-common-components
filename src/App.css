@@ -6,8 +6,10 @@
   text-decoration: none;
 }
 
-html {
+html,
+body {
   font-size: 100%;
+  scroll-snap-type: y mandatory;
 }
 
 a {
@@ -32,6 +34,7 @@ input {
 .screenContainer {
   width: 50vw;
   background-color: white;
+  scroll-snap-align: start;
 }
 
 .panels {
@@ -66,4 +69,9 @@ input {
 .list {
   grid-column-start: 3;
   grid-column-end: five;
+}
+
+.toggle {
+  display: grid;
+  justify-items: center;
 }
