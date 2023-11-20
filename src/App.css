@@ -26,13 +26,13 @@ input {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, fr));
   grid-auto-rows: 900px;
-  gap: 1rem;
   width: 100%;
   background-color: black;
 }
 
 .screenContainer {
   width: 50vw;
+  height: 100vh;
   background-color: white;
   scroll-snap-align: start;
 }
