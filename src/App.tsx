@@ -4,6 +4,7 @@ import { SearchBar } from './components/';
 import { DatePicker } from './components';
 import { List } from './components/';
 import { Toggle } from './components';
+import { Input } from './components/';
 import './App.css';
 
 export const App = () => {
@@ -30,6 +31,12 @@ export const App = () => {
         </div>
         <div className="screenContainer toggle">
           <Toggle />
+        </div>
+        <div className="screenContainer">
+          <Input type="text" />
+        </div>
+        <div className="screenContainer">
+          <Input type="text" />
         </div>
       </section>
     </>
