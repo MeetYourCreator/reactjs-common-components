@@ -26,8 +26,8 @@ export const Slider = ({ urlArray }: SliderProps) => {
             name="Show Next"
             onClick={() => {
               setUrlIndex((index) => {
-                if (index === 0) {
-                  return urlArray.length - 1;
+                if (index === urlArray.length - 1) {
+                  return 0;
                 } else {
                   return urlIndex + 1;
                 }
