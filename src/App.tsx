@@ -6,6 +6,7 @@ import { List } from './components/';
 import { Toggle } from './components';
 import { Input } from './components/';
 import { Slider } from './components/';
+import TestIMG from './testimg.jpg';
 import './App.css';
 
 export const App = () => {
@@ -37,7 +38,13 @@ export const App = () => {
           <Input type="text" />
         </div>
         <div className="screenContainer">
-          <Slider urlArray={[<Toggle />, <Input type="text" />]} />
+          <Slider
+            urlArray={[
+              <Toggle />,
+              <Input type="text" />,
+              <img src={TestIMG} alt="testIMG" />,
+            ]}
+          />
         </div>
       </section>
     </>

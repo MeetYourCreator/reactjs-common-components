@@ -5,6 +5,6 @@ export { Input } from './Input/Input';
 export { List } from './List/List';
 export { ShowModalBtn as Modal } from './Modal/ShowModalBtn';
 export { SearchBar } from './SearchBar/SearchBar';
-export { SliderContainer as Slider } from './Slider/SliderContainer';
+export { Slider } from './Slider/Slider';
 export { SplitViewPanels } from './SplitViewPanels/SplitViewPanels';
 export { Toggle } from './Toggle/Toggle';
