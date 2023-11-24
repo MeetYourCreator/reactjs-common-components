@@ -1,13 +1,15 @@
+import { useId } from 'react';
 import { useBoolean } from '../../hooks/useBoolean';
 import './styles.css';
 
 export const Toggle = () => {
   // const { toggle } = useBoolean();
+  const toggleId = useId();
   return (
     <>
-      <input type="checkbox" id="check" className="toggle" />
+      <input type="checkbox" id={toggleId} className="toggle" />
       <label
-        htmlFor="check"
+        htmlFor={toggleId}
         // onClick={toggle}
       />
     </>

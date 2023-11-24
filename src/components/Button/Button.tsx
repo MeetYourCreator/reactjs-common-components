@@ -1,10 +1,11 @@
-import React from 'react';
+import { useId } from 'react';
 import { ButtonProps } from './types';
 import './styles.css';
 
 export const Button = ({ onClick, name, styles }: ButtonProps) => {
+  const buttonId = useId();
   return (
-    <button className="button" onClick={onClick} style={styles}>
+    <button id={buttonId} className="button" onClick={onClick} style={styles}>
       {name}
     </button>
   );
