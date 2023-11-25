@@ -49,7 +49,7 @@ export const SearchBar = () => {
           {inputField.queries?.map((query) => {
             return (
               <ul>
-                <li onClick={() => setInputField({ query: query })}>{query}</li>
+                <li className='dropdownOption' onClick={() => setInputField({ query: query })}>{query}</li>
               </ul>
             );
           })}

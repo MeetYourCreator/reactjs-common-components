@@ -1,3 +1,7 @@
 .listContainer {
   background-color: darkgoldenrod;
 }
+
+ul {
+  list-style-type: upper-roman;
+}

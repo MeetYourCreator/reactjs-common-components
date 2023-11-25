@@ -9,6 +9,19 @@
 }
 
 .modalContainer {
+  display: grid;
+  grid-template-columns: minmax(1px, 1fr);
+  grid-template-rows: 1fr;
+  width: fit-content;
+  height: auto;
+  position: relative;
+  z-index: 10;
+  font-size: 1rem;
+  color: #d0defa;
+  background-color: #07184a;
+}
+/* 
+.modalContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,12 +33,12 @@
   font-size: small;
   color: #d0defa;
   background-color: #07184a;
-}
+} */
 
-.footer {
+/* .footer {
   display: flex;
   justify-content: flex-end;
   position: relative;
   top: 30px;
   width: 100%;
-}
+} */

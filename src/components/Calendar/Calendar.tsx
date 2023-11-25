@@ -11,15 +11,7 @@ export const Calendar = () => {
   const [selectedDate, setSelectedDate] = useContext<any>(DateContext);
   const { days, dateDisplay } = useDate(nav);
 
-  const weekdays = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
+  const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
   return (
     <>

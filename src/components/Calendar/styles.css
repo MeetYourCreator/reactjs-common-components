@@ -7,30 +7,31 @@
 .buttonContainer {
   display: flex;
   justify-content: space-evenly;
-  width: 150px;
 }
 
 .calendarHeader {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   justify-items: center;
-  padding: 5px 0px;
-  margin: 0px 0px -5px 0px;
+  padding: 3px 0px;
+  margin: 0px 0px 5px 0px;
+  font-size: 0.5rem;
   background-color: #dcdbdb;
 }
 
 .calendarBody {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 120px);
+  grid-template-rows: repeat(auto, 100px);
   column-gap: 5px;
   row-gap: 5px;
+  font-size: 0.5rem;
 }
 
 .calendarDay {
-  padding: 5px 0 0 5px;
-  font-size: 1em;
+  padding: 5px 0 0 2px;
   border: 1px solid black;
+  font-size: 0.8em;
   background-color: white;
 }
 

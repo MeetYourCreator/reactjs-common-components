@@ -3,6 +3,10 @@ import { Modal } from './components/';
 import { SearchBar } from './components/';
 import { DatePicker } from './components';
 import { List } from './components/';
+import { Toggle } from './components';
+import { Input } from './components/';
+import { Slider } from './components/';
+import TestIMG from './testimg.jpg';
 import './App.css';
 
 export const App = () => {
@@ -19,13 +23,28 @@ export const App = () => {
           <DatePicker />
         </div>
         <div className="screenContainer modal">
-          <Modal btnName="Submit" />
+          <Modal />
         </div>
         <div className="screenContainer searchBar">
           <SearchBar />
         </div>
         <div className="screenContainer list">
           <List />
+        </div>
+        <div className="screenContainer toggle">
+          <Toggle />
+        </div>
+        <div className="screenContainer">
+          <Input type="text" />
+        </div>
+        <div className="screenContainer">
+          <Slider
+            urlArray={[
+              <Toggle />,
+              <Input type="text" />,
+              <img src={TestIMG} alt="testIMG" />,
+            ]}
+          />
         </div>
       </section>
     </>
