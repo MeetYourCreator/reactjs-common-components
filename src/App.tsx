@@ -2,7 +2,6 @@ import { SplitViewPanels } from './components/';
 import { Modal } from './components/';
 import { SearchBar } from './components/';
 import { DatePicker } from './components';
-import { List } from './components/';
 import { Toggle } from './components';
 import { Input } from './components/';
 import { Slider } from './components/';
@@ -27,9 +26,6 @@ export const App = () => {
         </div>
         <div className="screenContainer searchBar">
           <SearchBar />
-        </div>
-        <div className="screenContainer list">
-          <List />
         </div>
         <div className="screenContainer toggle">
           <Toggle />
