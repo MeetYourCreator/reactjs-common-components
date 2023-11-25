@@ -11,7 +11,7 @@ export const Slider = ({ urlArray }: SliderProps) => {
         <div className="slider">{urlArray[urlIndex]}</div>
         {/* <div className="buttonContainer"> */}
         <Button
-          name="Show Previous"
+          name="Prev"
           onClick={() =>
             setUrlIndex((index) => {
               if (index === 0) {
@@ -33,7 +33,7 @@ export const Slider = ({ urlArray }: SliderProps) => {
           }}
         />
         <Button
-          name="Show Next"
+          name="Next"
           onClick={() => {
             setUrlIndex((index) => {
               if (index === urlArray.length - 1) {
