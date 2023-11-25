@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Button } from '../index';
+import LeftArrow from './assets/left-arrow.png';
+import RightArrow from './assets/right-arrow.png';
 import { SliderProps } from './types';
 import './styles.css';
 
@@ -11,7 +13,7 @@ export const Slider = ({ urlArray }: SliderProps) => {
         <div className="slider">{urlArray[urlIndex]}</div>
         {/* <div className="buttonContainer"> */}
         <Button
-          name="Prev"
+          icon={<img src={LeftArrow} className="btnImg" alt="Previous" />}
           onClick={() =>
             setUrlIndex((index) => {
               if (index === 0) {
@@ -33,7 +35,7 @@ export const Slider = ({ urlArray }: SliderProps) => {
           }}
         />
         <Button
-          name="Next"
+          icon={<img src={RightArrow} className="btnImg" alt="Next" />}
           onClick={() => {
             setUrlIndex((index) => {
               if (index === urlArray.length - 1) {

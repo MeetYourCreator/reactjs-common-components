@@ -4,6 +4,10 @@ img {
   object-fit: cover;
 }
 
+.btnImg {
+  height: 30px;
+}
+
 button:hover {
   background-color: rgb(0, 0, 0, 0.2);
 }
