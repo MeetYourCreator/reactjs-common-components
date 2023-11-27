@@ -9,11 +9,19 @@ export const Slider = ({ urlArray }: SliderProps) => {
   const [urlIndex, setUrlIndex] = useState(0);
   const [hover, setHover] = useState<undefined | string>();
   const onHover = (e: any) => {
-    setHover((e.target.style.background = 'black'));
+    e.stopPropagation();
+    setHover((e.target.style.background = 'rgb(0,0,0,.2)'));
+    setHover(
+      (e.target.style.transition = 'background-color 200ms ease-in-out')
+    );
   };
 
   const onHoverLeave = (e: any) => {
+    e.stopPropagation();
     setHover((e.target.style.background = 'transparent'));
+    setHover(
+      (e.target.style.transition = 'background-color 200ms ease-in-out')
+    );
   };
 
   return (
