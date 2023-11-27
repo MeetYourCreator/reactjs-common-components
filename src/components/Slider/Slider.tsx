@@ -11,6 +11,11 @@ export const Slider = ({ urlArray }: SliderProps) => {
   const onHover = (e: any) => {
     setHover((e.target.style.background = 'black'));
   };
+
+  const onHoverLeave = (e: any) => {
+    setHover((e.target.style.background = 'transparent'));
+  };
+
   return (
     <>
       <div className="sliderContainer">
@@ -27,6 +32,8 @@ export const Slider = ({ urlArray }: SliderProps) => {
               }
             })
           }
+          onMouseEnter={onHover}
+          onMouseLeave={onHoverLeave}
           styles={{
             all: 'unset',
             display: 'block',
@@ -37,7 +44,6 @@ export const Slider = ({ urlArray }: SliderProps) => {
             padding: '1rem',
             cursor: 'pointer',
           }}
-          onMouseEnter={onHover}
         />
         <Button
           icon={<img src={RightArrow} className="btnImg" alt="Next" />}
@@ -50,6 +56,8 @@ export const Slider = ({ urlArray }: SliderProps) => {
               }
             });
           }}
+          onMouseEnter={onHover}
+          onMouseLeave={onHoverLeave}
           styles={{
             all: 'unset',
             display: 'block',

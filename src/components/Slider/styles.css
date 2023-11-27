@@ -6,6 +6,7 @@ img {
 
 .btnImg {
   height: 30px;
+  background-color: transparent;
 }
 
 .sliderContainer {

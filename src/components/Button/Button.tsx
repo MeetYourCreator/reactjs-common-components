@@ -3,12 +3,12 @@ import { ButtonProps } from './types';
 import './styles.css';
 
 export const Button = ({
-  onClick,
   name,
   icon,
-  styles,
+  onClick,
   onMouseEnter,
   onMouseLeave,
+  styles,
 }: ButtonProps) => {
   const buttonId = useId();
 
