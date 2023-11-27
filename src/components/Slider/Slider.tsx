@@ -1,17 +1,34 @@
 import { useState } from 'react';
 import { Button } from '../index';
+import LeftArrow from './assets/left-arrow.png';
+import RightArrow from './assets/right-arrow.png';
 import { SliderProps } from './types';
 import './styles.css';
 
 export const Slider = ({ urlArray }: SliderProps) => {
   const [urlIndex, setUrlIndex] = useState(0);
+  const [hover, setHover] = useState<undefined | string>();
+  const onHover = (e: any) => {
+    setHover((e.target.style.background = 'rgb(0,0,0,.2)'));
+    setHover(
+      (e.target.style.transition = 'background-color 200ms ease-in-out')
+    );
+  };
+
+  const onHoverLeave = (e: any) => {
+    setHover((e.target.style.background = 'transparent'));
+    setHover(
+      (e.target.style.transition = 'background-color 200ms ease-in-out')
+    );
+  };
+
   return (
     <>
       <div className="sliderContainer">
         <div className="slider">{urlArray[urlIndex]}</div>
         {/* <div className="buttonContainer"> */}
         <Button
-          name="Prev"
+          icon={<img src={LeftArrow} className="btnImg" alt="Previous" />}
           onClick={() =>
             setUrlIndex((index) => {
               if (index === 0) {
@@ -21,6 +38,8 @@ export const Slider = ({ urlArray }: SliderProps) => {
               }
             })
           }
+          onMouseEnter={onHover}
+          onMouseLeave={onHoverLeave}
           styles={{
             all: 'unset',
             display: 'block',
@@ -33,7 +52,7 @@ export const Slider = ({ urlArray }: SliderProps) => {
           }}
         />
         <Button
-          name="Next"
+          icon={<img src={RightArrow} className="btnImg" alt="Next" />}
           onClick={() => {
             setUrlIndex((index) => {
               if (index === urlArray.length - 1) {
@@ -43,6 +62,8 @@ export const Slider = ({ urlArray }: SliderProps) => {
               }
             });
           }}
+          onMouseEnter={onHover}
+          onMouseLeave={onHoverLeave}
           styles={{
             all: 'unset',
             display: 'block',
