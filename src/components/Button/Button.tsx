@@ -2,7 +2,14 @@ import { useId } from 'react';
 import { ButtonProps } from './types';
 import './styles.css';
 
-export const Button = ({ onClick, name, icon, styles }: ButtonProps) => {
+export const Button = ({
+  onClick,
+  name,
+  icon,
+  styles,
+  onMouseEnter,
+  onMouseLeave,
+}: ButtonProps) => {
   const buttonId = useId();
 
   const onHover = (e: any) => {
@@ -17,8 +24,8 @@ export const Button = ({ onClick, name, icon, styles }: ButtonProps) => {
       id={buttonId}
       className="button"
       onClick={onClick}
-      onMouseEnter={onHover}
-      onMouseLeave={onHoverLeave}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       style={styles}
     >
       {name}

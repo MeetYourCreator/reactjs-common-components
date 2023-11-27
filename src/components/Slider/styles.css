@@ -8,10 +8,6 @@ img {
   height: 30px;
 }
 
-button:hover {
-  background-color: rgb(0, 0, 0, 0.2);
-}
-
 .sliderContainer {
   display: flex;
   flex-direction: column;
