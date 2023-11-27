@@ -12,13 +12,6 @@ export const Button = ({
 }: ButtonProps) => {
   const buttonId = useId();
 
-  const onHover = (e: any) => {
-    e.target.style.background = 'black';
-  };
-
-  const onHoverLeave = (e: any) => {
-    e.target.style.background = 'transparent';
-  };
   return (
     <button
       id={buttonId}

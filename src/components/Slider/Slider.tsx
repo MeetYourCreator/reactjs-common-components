@@ -7,6 +7,10 @@ import './styles.css';
 
 export const Slider = ({ urlArray }: SliderProps) => {
   const [urlIndex, setUrlIndex] = useState(0);
+  const [hover, setHover] = useState<undefined | string>();
+  const onHover = (e: any) => {
+    setHover((e.target.style.background = 'black'));
+  };
   return (
     <>
       <div className="sliderContainer">
@@ -33,6 +37,7 @@ export const Slider = ({ urlArray }: SliderProps) => {
             padding: '1rem',
             cursor: 'pointer',
           }}
+          onMouseEnter={onHover}
         />
         <Button
           icon={<img src={RightArrow} className="btnImg" alt="Next" />}
