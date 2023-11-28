@@ -44,11 +44,14 @@ input {
   justify-items: center;
 }
 
-.searchBar {
-  display: flex;
-  flex-direction: column;
+.modal {
+  display: grid;
   justify-items: center;
-  align-items: center;
+}
+
+.searchBar {
+  display: grid;
+  justify-items: center;
 }
 
 .toggle {

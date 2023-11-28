@@ -1,11 +1,7 @@
-.showModalBtn {
-  width: 100px;
-  height: 15px;
-  position: relative;
-  z-index: 0;
-  border: 1px solid slategray;
-  border-radius: 4px;
-  background-color: transparent;
+.dialogContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalContainer {

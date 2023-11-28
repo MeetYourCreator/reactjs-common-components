@@ -8,20 +8,21 @@ export const ShowModalBtn = () => {
 
   return (
     <>
-      <section>
+      <section className="dialogContainer">
         <Button
           onClick={setIsVisible}
           name="Open Modal"
           styles={{ position: 'absolute', zIndex: 0 }}
         />
+
+        {isValue && (
+          <Modal
+            setIsModalOpen={setIsFalse}
+            header="Modal Title"
+            main="Supporting Content"
+          />
+        )}
       </section>
-      {isValue && (
-        <Modal
-          setIsModalOpen={setIsFalse}
-          header="Modal Title"
-          main="Supporting Content"
-        />
-      )}
     </>
   );
 };
