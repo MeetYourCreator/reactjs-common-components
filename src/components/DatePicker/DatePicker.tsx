@@ -11,16 +11,18 @@ export const DatePicker = () => {
   return (
     <>
       <DateContext.Provider value={[selectedDate, setSelectedDate]}>
-        <form
-          onSubmit={(e: FormEvent) => {
-            e.preventDefault();
-            setIsHidden();
-            setSelectedDate('');
-          }}
-        >
-          <input onFocus={setIsVisible} value={selectedDate} />
-        </form>
-        <div className="dropdownContainer">{isValue && <Calendar />}</div>
+        <div className="datePickerContainer">
+          <form
+            onSubmit={(e: FormEvent) => {
+              e.preventDefault();
+              setIsHidden();
+              setSelectedDate('');
+            }}
+          >
+            <input onFocus={setIsVisible} value={selectedDate} />
+          </form>
+          <div className="dropdownContainer">{isValue && <Calendar />}</div>
+        </div>
       </DateContext.Provider>
     </>
   );
