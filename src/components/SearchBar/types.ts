@@ -1,10 +1,13 @@
 import { ComponentProps } from '../types';
 
-export interface inputFieldProps extends ComponentProps {
+export interface SearchBarOutput {
+  searchData: Array<any>;
+}
+export interface InputFieldOutput extends ComponentProps {
   query: string;
   queries?: Array<string>;
 }
 
-export interface formDataProps extends ComponentProps {
+export interface FormDataOutput extends ComponentProps {
   searchValue: string;
 }

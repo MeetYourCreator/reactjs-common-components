@@ -1,6 +1,7 @@
 export { Button } from './Button/Button';
 export { Calendar } from './Calendar/Calendar';
 export { DatePicker } from './DatePicker/DatePicker';
+export { InfiniteScroll } from './InfiniteScroll/InfiniteScroll';
 export { Input } from './Input/Input';
 export { ShowModalBtn as Modal } from './Modal/ShowModalBtn';
 export { SearchBar } from './SearchBar/SearchBar';

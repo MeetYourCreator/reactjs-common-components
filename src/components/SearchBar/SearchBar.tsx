@@ -1,20 +1,20 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import { placeholderArray } from './utils';
-import { inputFieldProps, formDataProps } from './types';
+import { placeholderArray } from '../../utils';
+import { SearchBarOutput, InputFieldOutput, FormDataOutput } from './types';
 import './styles.css';
 
-export const SearchBar = () => {
+export const SearchBar = ({ searchData }: SearchBarOutput) => {
   //Bundling the state values like this, instead of creating one for each value, cuts the number of renders, improving performance.
-  const [inputField, setInputField] = useState<inputFieldProps>({
+  const [inputField, setInputField] = useState<InputFieldOutput>({
     query: '',
     queries: [],
   });
-  const [formData, setFormData] = useState<formDataProps>({
+  const [formData, setFormData] = useState<FormDataOutput>({
     searchValue: inputField.query,
   });
 
-  console.log('inputField: ', inputField);
-  console.log('formData.searchValue: ', formData, formData.searchValue);
+  // console.log('inputField: ', inputField);
+  // console.log('formData.searchValue: ', formData, formData.searchValue);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -23,9 +23,9 @@ export const SearchBar = () => {
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const entries = placeholderArray.filter((item: any) => {
+    const entries = searchData.filter((item: any) => {
       if (e.target.value === '') {
-        return placeholderArray;
+        return searchData;
       } else {
         return item.toLowerCase().includes(e.target.value);
       }
@@ -49,7 +49,12 @@ export const SearchBar = () => {
           {inputField.queries?.map((query) => {
             return (
               <ul>
-                <li className='dropdownOption' onClick={() => setInputField({ query: query })}>{query}</li>
+                <li
+                  className="dropdownOption"
+                  onClick={() => setInputField({ query: query })}
+                >
+                  {query}
+                </li>
               </ul>
             );
           })}

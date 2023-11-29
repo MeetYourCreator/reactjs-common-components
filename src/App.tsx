@@ -5,6 +5,8 @@ import { DatePicker } from './components';
 import { Toggle } from './components';
 import { Input } from './components/';
 import { Slider } from './components/';
+import { InfiniteScroll } from './components/';
+import { placeholderArray } from './utils';
 import TestIMG from './testimg.jpg';
 import TestIMG2 from './diner.jpg';
 import './App.css';
@@ -26,7 +28,7 @@ export const App = () => {
           <Modal />
         </div>
         <div className="screenContainer searchBar">
-          <SearchBar />
+          <SearchBar searchData={placeholderArray} />
         </div>
         <div className="screenContainer toggle">
           <Toggle />
@@ -43,6 +45,9 @@ export const App = () => {
               <img src={TestIMG2} alt="testIMG2" />,
             ]}
           />
+        </div>
+        <div className="screenContainer">
+          <InfiniteScroll />
         </div>
       </section>
     </>
