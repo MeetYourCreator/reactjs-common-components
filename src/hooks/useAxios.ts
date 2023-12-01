@@ -19,7 +19,6 @@ export const useAxios = ({ method, url, params }: UseAxiosInput) => {
       params: params,
     })
       .then((response) => {
-        console.log(response);
         setResponse({
           data: response.data,
           config: response.config,
@@ -31,7 +30,7 @@ export const useAxios = ({ method, url, params }: UseAxiosInput) => {
       .then((response) => response)
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
-  }, []);
+  }, [method, url, params]);
 
   if (loading) return 'Loading...';
   if (error) return `Error return: ${error}`;

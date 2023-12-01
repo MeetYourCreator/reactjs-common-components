@@ -1,5 +1,4 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import { placeholderArray } from '../../utils';
 import { SearchBarOutput, InputFieldOutput, FormDataOutput } from './types';
 import './styles.css';
 
@@ -27,7 +26,7 @@ export const SearchBar = ({ searchData }: SearchBarOutput) => {
       if (e.target.value === '') {
         return searchData;
       } else {
-        return item.toLowerCase().includes(e.target.value);
+        return item.includes(e.target.value);
       }
     });
     setInputField({ query: e.target.value, queries: entries });

@@ -5,7 +5,6 @@ import { DatePicker } from './components';
 import { Toggle } from './components';
 import { Input } from './components/';
 import { Slider } from './components/';
-import { InfiniteScroll } from './components/';
 import { placeholderArray } from './utils';
 import TestIMG from './testimg.jpg';
 import TestIMG2 from './diner.jpg';
@@ -45,9 +44,6 @@ export const App = () => {
               <img src={TestIMG2} alt="testIMG2" />,
             ]}
           />
-        </div>
-        <div className="screenContainer">
-          <InfiniteScroll />
         </div>
       </section>
     </>
