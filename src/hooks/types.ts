@@ -8,3 +8,16 @@ export interface UseBooleanOutput {
   setIsHidden: () => void;
   toggle: () => void;
 }
+export interface UseAxiosInput {
+  method: string;
+  url: string;
+  params?: any;
+}
+
+export interface UseAxiosResponse {
+  data: any;
+  config: any;
+  headers: any;
+  request: any;
+  status: number;
+}
