@@ -27,7 +27,7 @@ export const App = () => {
           <Modal />
         </div>
         <div className="screenContainer searchBar">
-          <SearchBar searchData={placeholderArray} />
+          <SearchBar searchBarData={placeholderArray} />
         </div>
         <div className="screenContainer toggle">
           <Toggle />

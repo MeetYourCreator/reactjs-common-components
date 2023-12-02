@@ -1,9 +1,9 @@
 import { ComponentProps } from '../types';
 
-export interface SearchBarOutput {
-  searchData: Array<any>;
+export interface SearchBarData {
+  searchBarData: Array<string>;
 }
-export interface InputFieldOutput extends ComponentProps {
+export interface InputField extends ComponentProps {
   query: string;
   queries?: Array<string>;
 }

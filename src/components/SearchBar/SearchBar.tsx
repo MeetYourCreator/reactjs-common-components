@@ -1,17 +1,16 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import { SearchBarOutput, InputFieldOutput, FormDataOutput } from './types';
+import { SearchBarData, InputField, FormDataOutput } from './types';
 import './styles.css';
 
-export const SearchBar = ({ searchData }: SearchBarOutput) => {
+export const SearchBar = ({ searchBarData }: SearchBarData) => {
   //Bundling the state values like this, instead of creating one for each value, cuts the number of renders, improving performance.
-  const [inputField, setInputField] = useState<InputFieldOutput>({
+  const [inputField, setInputField] = useState<InputField>({
     query: '',
     queries: [],
   });
   const [formData, setFormData] = useState<FormDataOutput>({
     searchValue: inputField.query,
   });
-
   // console.log('inputField: ', inputField);
   // console.log('formData.searchValue: ', formData, formData.searchValue);
 
@@ -22,9 +21,9 @@ export const SearchBar = ({ searchData }: SearchBarOutput) => {
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const entries = searchData.filter((item: any) => {
+    const entries = searchBarData.filter((item: any) => {
       if (e.target.value === '') {
-        return searchData;
+        return searchBarData;
       } else {
         return item.includes(e.target.value);
       }
