@@ -7,8 +7,8 @@ import { Input } from './components/';
 import { Slider } from './components/';
 import { InfiniteScroll } from './components/';
 import { placeholderArray } from './utils';
-import TestIMG from './testimg.jpg';
-import TestIMG2 from './diner.jpg';
+import TestIMG from './assets/test/testimg.jpg';
+import TestIMG2 from './assets/test/diner.jpg';
 import './App.css';
 
 export const App = () => {
@@ -33,7 +33,7 @@ export const App = () => {
         <div className="screenContainer toggle">
           <Toggle />
         </div>
-        <div className="screenContainer">
+        <div className="screenContainer searchBar">
           <Input type="text" />
         </div>
         <div className="screenContainer">
@@ -46,7 +46,7 @@ export const App = () => {
             ]}
           />
         </div>
-        <div className="screenContainer">
+        <div className="screenContainer searchBar">
           <InfiniteScroll />
         </div>
       </section>
