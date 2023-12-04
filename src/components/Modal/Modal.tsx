@@ -1,19 +1,22 @@
-import { Button } from '../Button/Button';
+import { Card } from '../index';
+import { Button } from '../index';
 import { ModalProps } from './types';
 import './styles.css';
 
 export const Modal: React.FunctionComponent<ModalProps> = ({
   setIsModalOpen,
-  header,
-  main,
+  modalHeader,
+  modalImage,
+  modalText,
 }) => {
   return (
     <div className="modalContainer">
-      <header>{header}</header>
-      <main>{main}</main>
-      <div className="footer">
-        <Button onClick={setIsModalOpen} name="Close" />
-      </div>
+      <Card
+        cardHeader={modalHeader}
+        cardImage={modalImage}
+        cardText={modalText}
+        cardFooter={<Button onClick={setIsModalOpen} name="Close" />}
+      />
     </div>
   );
 };

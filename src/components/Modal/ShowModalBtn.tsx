@@ -18,8 +18,8 @@ export const ShowModalBtn = () => {
         {isValue && (
           <Modal
             setIsModalOpen={setIsFalse}
-            header="Modal Title"
-            main="Supporting Content"
+            modalHeader="Modal Title"
+            modalText="Supporting Content"
           />
         )}
       </section>

@@ -6,6 +6,7 @@ import { Toggle } from './components';
 import { Input } from './components/';
 import { Slider } from './components/';
 import { InfiniteScroll } from './components/';
+import { Card } from './components/';
 import { placeholderArray } from './utils';
 import TestIMG from './assets/test/testimg.jpg';
 import TestIMG2 from './assets/test/diner.jpg';
@@ -48,6 +49,9 @@ export const App = () => {
         </div>
         <div className="screenContainer searchBar">
           <InfiniteScroll />
+        </div>
+        <div className="screenContainer searchBar">
+          <Card cardHeader="title" cardText="Main text" cardFooter="footer" />
         </div>
       </section>
     </>
