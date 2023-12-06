@@ -53,13 +53,14 @@ export const App = () => {
         <div className="screenContainer searchBar">
           <Card
             cardHeader="title"
+            // cardImage={TestIMG2}
             cardText="Main text"
             cardFooter="footer"
-            styles={{
-              width: '200px',
-              height: '100px',
-              backgroundColor: 'blue',
-            }}
+            // styles={{
+            //   width: '200px',
+            //   height: '100px',
+            //   backgroundColor: 'blue',
+            // }}
           />
         </div>
       </section>
