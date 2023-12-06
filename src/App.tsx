@@ -55,7 +55,11 @@ export const App = () => {
             cardHeader="title"
             cardText="Main text"
             cardFooter="footer"
-            styles={{ width: '100px', height: '100px' }}
+            styles={{
+              width: '200px',
+              height: '100px',
+              backgroundColor: 'blue',
+            }}
           />
         </div>
       </section>

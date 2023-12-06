@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardProps } from './types';
 import './styles.css';
 
@@ -9,8 +9,9 @@ export const Card = ({
   cardFooter,
   styles,
 }: CardProps) => {
+  const cardId = useId();
   return (
-    <div className="cardContainer" style={styles}>
+    <div className="cardContainer" style={styles} id={cardId}>
       <header>{cardHeader}</header>
       <main className="cardContent">
         <div className="cardImage">{cardImage}</div>
