@@ -51,7 +51,12 @@ export const App = () => {
           <InfiniteScroll />
         </div>
         <div className="screenContainer searchBar">
-          <Card cardHeader="title" cardText="Main text" cardFooter="footer" />
+          <Card
+            cardHeader="title"
+            cardText="Main text"
+            cardFooter="footer"
+            styles={{ width: '100px', height: '100px' }}
+          />
         </div>
       </section>
     </>

@@ -17,6 +17,7 @@ export const Input = ({
   placeholder,
   readOnly,
   required,
+  styles,
 }: InputProps) => {
   labelId = useId();
 
@@ -39,6 +40,7 @@ export const Input = ({
         placeholder={placeholder}
         readOnly={readOnly}
         required={required}
+        style={styles}
       />
     </>
   );

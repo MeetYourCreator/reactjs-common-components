@@ -10,6 +10,7 @@ export interface DayProps extends ComponentProps {
   onSelectedDate: any;
 }
 
+export interface CalendarProps extends ComponentProps {}
 export interface DateObj extends ComponentProps {
   value: string;
   isCurrentDay: boolean;

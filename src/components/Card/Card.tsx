@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CardProps } from './types';
 import './styles.css';
 
@@ -7,13 +7,10 @@ export const Card = ({
   cardImage,
   cardText,
   cardFooter,
+  styles,
 }: CardProps) => {
-  const [width, setWidth] = useState('');
-  const [height, setHeight] = useState('');
-  const [backgroundColor, setBackgroundColor] = useState('');
-
   return (
-    <div className="cardContainer">
+    <div className="cardContainer" style={styles}>
       <header>{cardHeader}</header>
       <main className="cardContent">
         <div className="cardImage">{cardImage}</div>

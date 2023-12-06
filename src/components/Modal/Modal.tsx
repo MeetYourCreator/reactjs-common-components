@@ -8,9 +8,10 @@ export const Modal: React.FunctionComponent<ModalProps> = ({
   modalHeader,
   modalImage,
   modalText,
+  styles,
 }) => {
   return (
-    <div className="modalContainer">
+    <div className="modalContainer" style={styles}>
       <Card
         cardHeader={modalHeader}
         cardImage={modalImage}

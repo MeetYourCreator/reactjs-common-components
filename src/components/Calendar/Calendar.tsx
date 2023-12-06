@@ -3,10 +3,10 @@ import { DateContext } from '../../context';
 import { Day } from './Day';
 import { Header } from './Header';
 import { useDate } from '../../hooks/useDate';
-import { DateObj } from './types';
+import { CalendarProps, DateObj } from './types';
 import './styles.css';
 
-export const Calendar = () => {
+export const Calendar = ({ styles }: CalendarProps) => {
   const [nav, setNav] = useState<number>(0);
   const [selectedDate, setSelectedDate] = useContext<any>(DateContext);
   const { days, dateDisplay } = useDate(nav);
@@ -20,7 +20,7 @@ export const Calendar = () => {
         onNext={() => setNav(nav + 1)}
         onBack={() => setNav(nav - 1)}
       />
-      <header className="calendarHeader">
+      <header className="calendarHeader" style={styles}>
         {weekdays.map((weekday: string) => {
           return <div>{weekday}</div>;
         })}
