@@ -7,6 +7,7 @@ import { Input } from './components/';
 import { Slider } from './components/';
 import { InfiniteScroll } from './components/';
 import { Card } from './components/';
+import { HorizontalNav } from './components/';
 import { placeholderArray } from './utils';
 import TestIMG from './assets/test/testimg.jpg';
 import TestIMG2 from './assets/test/diner.jpg';
@@ -56,12 +57,15 @@ export const App = () => {
             // cardImage={TestIMG2}
             cardText="Main text"
             cardFooter="footer"
-            // styles={{
-            //   width: '200px',
-            //   height: '100px',
-            //   backgroundColor: 'blue',
-            // }}
+            styles={{
+              width: '100%',
+              height: '100%',
+              backgroundColor: 'blue',
+            }}
           />
+        </div>
+        <div className="screenContainer">
+          <HorizontalNav />
         </div>
       </section>
     </>
