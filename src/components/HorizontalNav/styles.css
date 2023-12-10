@@ -1,0 +1,8 @@
+.horizontalNavContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  position: relative;
+
+  background-color: red;
+}
