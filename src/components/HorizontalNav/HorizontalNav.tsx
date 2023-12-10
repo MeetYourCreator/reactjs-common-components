@@ -6,5 +6,6 @@ export const HorizontalNav = () => {
   useEffect(() => {
     window.addEventListener('scroll', changeBkgrd);
   }, [changeBkgrd]);
+
   return <div className="horizontalNavContainer">HorizontalNav</div>;
 };

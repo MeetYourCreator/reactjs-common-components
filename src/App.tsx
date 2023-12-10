@@ -51,6 +51,9 @@ export const App = () => {
         <div className="screenContainer searchBar">
           <InfiniteScroll />
         </div>
+        <div className="screenContainer">
+          <HorizontalNav />
+        </div>
         <div className="screenContainer searchBar">
           <Card
             cardHeader="title"
@@ -63,9 +66,6 @@ export const App = () => {
               backgroundColor: 'blue',
             }}
           />
-        </div>
-        <div className="screenContainer">
-          <HorizontalNav />
         </div>
       </section>
     </>
