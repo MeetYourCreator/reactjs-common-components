@@ -1,9 +1,38 @@
-.horizontalNavContainer {
+/* .horizontalNavContainer {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-content: flex-end;
   position: sticky;
+  width: 200vw;
+  max-height: 10px;
   top: 0;
   z-index: 1000;
   background-color: red;
+} */
+
+article .entry:first-child {
+  background-color: green;
+  transform: translateX(-150%);
+  opacity: 0;
+}
+
+article .entry:last-child {
+  transform: translateX(150%);
+  opacity: 0;
+}
+
+.entry {
+  opacity: 1;
+  /* transform: translateX(-150%); */
+  border: black 10px solid;
+  background-color: purple;
+}
+
+.slide-in {
+  opacity: 1;
+  transition-timing-function: ease-in-out;
+  transform: transition 100%;
+  opacity: 1 !important;
+  background-color: yellow;
 }

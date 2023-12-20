@@ -24,6 +24,7 @@ const LeftPanel: React.FunctionComponent<LeftPanelProps> = ({
 
 export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
   leftPanel,
+  
   rightPanel,
   className,
 }) => {
@@ -42,6 +43,7 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
 
   const onMouseDown = (e: React.MouseEvent) => {
     setSeparatorXPosition(e.clientX);
+    console.log(e.clientY);
     setIsDragging(true);
   };
 
@@ -49,7 +51,7 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
     if (isDragging && leftWidth && separatorXPosition) {
       const newLeftWidth = leftWidth + clientX - separatorXPosition;
       setSeparatorXPosition(clientX);
-
+      console.log('separatorXPosition', separatorXPosition);
       if (newLeftWidth < minLeftPanelWidth) {
         setLeftWidth(minLeftPanelWidth);
         return;

@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+
 import { SplitViewPanels } from './components/';
 import { Modal } from './components/';
 import { SearchBar } from './components/';
@@ -14,10 +16,13 @@ import TestIMG2 from './assets/test/diner.jpg';
 import './App.css';
 
 export const App = () => {
+  const getClientY = (e: any) => {
+    console.log('e.clientY: ', e.ClientY);
+  };
   return (
     <>
       <section className="appContainer">
-        <div className="screenContainer panels">
+        <div onScroll={getClientY} className="screenContainer panels">
           <SplitViewPanels
             leftPanel={<div>Left Panel Content</div>}
             rightPanel={<div>Right Panel Content</div>}
