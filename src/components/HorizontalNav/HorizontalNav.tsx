@@ -28,12 +28,12 @@ export const HorizontalNav = () => {
   useEffect(() => {
     if (isIntersecting) {
       ref.current
-        .querySelectorAll('article .entry:first-child')
+        .querySelectorAll('div')
         .forEach((el: any) => el.classList.add('slide-in'));
     } else {
       ref.current
-        .querySelectorAll('.article .entry:last-child')
-        .forEach((el: any) => el.classList.add('slide-out'));
+        .querySelectorAll('div')
+        .forEach((el: any) => el.classList.remove('slide-in'));
     }
   }, [isIntersecting]);
 
