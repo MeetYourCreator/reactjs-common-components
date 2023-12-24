@@ -12,30 +12,34 @@
 } */
 
 article .entry:first-child {
+  opacity: 1;
   background-color: green;
-  /* transform: translateX(-150%); */
-  opacity: 0;
 }
 
 article .entry:last-child {
-  /* transform: translateX(150%); */
-  opacity: 0;
+  opacity: 1;
+  background-color: rgb(111, 255, 0);
 }
 
 .entry {
   opacity: 1;
   transform: translateX(-50%);
-  /* transform: translateX(-150%); */
   border: black 10px solid;
-  background-color: purple;
+  background-color: rgb(207, 143, 207);
 }
 
 .slide-in {
   opacity: 1;
-  transition-timing-function: ease-in-out;
   transform: translateX(50%);
-  transform: transition 100%;
-  opacity: 1 !important;
+  transition: transorm 5s ease-in-out;
+  opacity: 1;
   background-color: yellow;
-  z-index: 1000;
+}
+
+.slide-out {
+  opacity: 1;
+  transform: translateX(150%);
+  transition: transorm 1s ease-in-out;
+  opacity: 1;
+  background-color: rgb(0, 255, 234);
 }

@@ -28,10 +28,12 @@ export const HorizontalNav = () => {
   useEffect(() => {
     if (isIntersecting) {
       ref.current
-        .querySelectorAll('.entry')
+        .querySelectorAll('article .entry:first-child')
         .forEach((el: any) => el.classList.add('slide-in'));
     } else {
-      ref.current.classList.remove('slide-in');
+      ref.current
+        .querySelectorAll('.article .entry:last-child')
+        .forEach((el: any) => el.classList.add('slide-out'));
     }
   }, [isIntersecting]);
 
@@ -47,17 +49,9 @@ export const HorizontalNav = () => {
       <div className="entry">
         <Card styles={{ border: '1px solid black' }} />
       </div>
-      <div className="entry">
-        <Card styles={{ border: '1px solid black' }} />
-      </div>
-      <div className="entry">
-        <Card styles={{ border: '1px solid black' }} />
-      </div>
 
       <div className="entry">This is an entry</div>
-      <div className="entry">This is an entry</div>
-      <div className="entry">This is an entry</div>
-      <div className="entry">This is an entry</div>
+
       <div className="entry">This is the last entry</div>
     </article>
   );
