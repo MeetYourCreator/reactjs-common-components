@@ -9,7 +9,7 @@
 html,
 body {
   font-size: 100%;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
 }
 
 a {
@@ -37,7 +37,7 @@ input {
   width: 50vw;
   height: 100vh;
   background-color: white;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .datepicker {
