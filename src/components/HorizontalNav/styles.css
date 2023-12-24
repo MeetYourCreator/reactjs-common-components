@@ -11,35 +11,23 @@
   background-color: red;
 } */
 
-article .entry:first-child {
-  opacity: 1;
-  background-color: green;
-}
-
-article .entry:last-child {
-  opacity: 1;
-  background-color: rgb(111, 255, 0);
-}
-
 .entry {
   opacity: 1;
-  transform: translateX(-50%);
+  transform: translateX(-80%);
   border: black 10px solid;
   background-color: rgb(207, 143, 207);
 }
 
 .slide-in {
   opacity: 1;
-  transform: translateX(50%);
+  transform: translateX(30%);
   transition: transorm 5s ease-in-out;
-  opacity: 1;
   background-color: yellow;
 }
 
 .slide-out {
   opacity: 1;
-  transform: translateX(150%);
+  transform: translateX(-30%);
   transition: transorm 1s ease-in-out;
-  opacity: 1;
   background-color: rgb(0, 255, 234);
 }
