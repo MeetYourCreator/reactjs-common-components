@@ -1,51 +1,58 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, RefObject } from 'react';
 import { Card } from '../index';
 import './styles.css';
 
 export const HorizontalNav = () => {
-  //keep track of whether user is scrolling,
-  const [isIntersecting, setIsIntersecting] = useState<boolean>(false);
   const ref = useRef<any>(null);
 
-  //create Intersection Observer
   useEffect(() => {
+    //create Intersection Observer
     const observer = new IntersectionObserver(
       ([entry]) => {
         console.log('entries', entry);
 
-        setIsIntersecting(entry.isIntersecting);
+        entry.target.classList.toggle('show', entry.isIntersecting);
       },
       {
         // rootMargin: '-300px',
         threshold: 0.5,
       }
     );
-    // });
-    console.log('isIntersecting', isIntersecting);
-    observer.observe(ref.current);
+    const cards = ref.current.querySelectorAll('.card');
+    cards.forEach((card: any) => {
+      observer.observe(card);
+    });
+    cards.forEach((el: any) => el.classList.toggle('show'));
     // return () => observer.disconnect();
-  }, [isIntersecting]);
-
-  useEffect(() => {
-    if (isIntersecting) {
-      ref.current
-        .querySelectorAll('.entry')
-        .forEach((el: any) => el.classList.add('slide-in'));
-    } else {
-      ref.current.querySelectorAll('article .entry').forEach((el: any) => {
-        el.classList.remove('slide-in');
-        // el.classList.add('slide-out');
-      });
-    }
-  }, [isIntersecting]);
+  }, []);
 
   return (
-    <article ref={ref} className="horizontalNavContainer">
-      <div className="entry">
-        <Card styles={{ border: '1px solid black' }} />
+    <article ref={ref} className="card-container">
+      <div className="card">
+        <Card
+          styles={{ border: '10px solid green', color: 'white' }}
+          cardText={'Card 0'}
+        />
       </div>
-
-      <div className="entry">This is the last entry</div>
+      <div className="card">
+        <Card
+          styles={{ border: '10px solid yellow', color: 'white' }}
+          cardText={'Card 1'}
+        />
+      </div>
+      <div className="card">
+        <Card
+          styles={{ border: '10px solid blue', color: 'white' }}
+          cardText={'Card 2'}
+        />
+      </div>
+      <div className="card">
+        <Card
+          styles={{ border: '10px solid black', color: 'white' }}
+          cardText={'Card 3'}
+        />
+      </div>
+      <div className="card">Card 4</div>
     </article>
   );
 };
