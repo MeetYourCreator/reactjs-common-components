@@ -18,6 +18,7 @@ export const HorizontalNav = () => {
         threshold: 0.5,
       }
     );
+
     const cards = ref.current.querySelectorAll('.card');
     cards.forEach((card: any) => {
       observer.observe(card);
