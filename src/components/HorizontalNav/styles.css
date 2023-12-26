@@ -1,11 +1,11 @@
-.card-container {
+.element-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1 rem;
 }
 
-.card {
+.element {
   padding: 0.5rem;
   border: 1px solid black;
   border-radius: 0.25rem;
@@ -16,7 +16,7 @@
   transition: 150ms;
 }
 
-.card.show {
+.element.show {
   transform: translateX(0);
   opacity: 1;
 }
