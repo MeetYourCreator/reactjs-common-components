@@ -7,7 +7,7 @@ export const HorizontalNav = () => {
 
   useEffect(() => {
     //create Intersection Observer
-    const showElementObserver = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       ([entry]) => {
         //console.log('entry', entry);
         entry.target.classList.toggle('show', entry.isIntersecting);
@@ -22,9 +22,9 @@ export const HorizontalNav = () => {
 
     const elements = ref.current.querySelectorAll('.element');
     elements.forEach((element: any) => {
-      showElementObserver.observe(element);
+      observer.observe(element);
     });
-    elements.forEach((el: any) => el.classList.toggle('show'));
+    elements.forEach((element: any) => element.classList.toggle('show'));
   }, []);
 
   return (
