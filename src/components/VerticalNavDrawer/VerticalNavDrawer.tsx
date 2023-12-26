@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, RefObject } from 'react';
 import { Card } from '../index';
 import './styles.css';
 
-export const HorizontalNav = () => {
+export const VerticalNavDrawer = () => {
   const ref = useRef<any>(null);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export const HorizontalNav = () => {
   return (
     <article
       ref={ref}
-      className="element-container"
+      className="vertical-nav-container"
       onWheel={(e) => console.log(e.deltaY)}
     >
       <div className="element">
@@ -57,7 +57,6 @@ export const HorizontalNav = () => {
           cardText={'Card 3'}
         />
       </div>
-      <div className="element">Card 4</div>
     </article>
   );
 };

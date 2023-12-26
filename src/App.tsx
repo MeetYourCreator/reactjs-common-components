@@ -9,7 +9,7 @@ import { Input } from './components/';
 import { Slider } from './components/';
 import { InfiniteScroll } from './components/';
 import { Card } from './components/';
-import { HorizontalNav } from './components/';
+import { VerticalNavDrawer } from './components/';
 import { placeholderArray } from './utils';
 import TestIMG from './assets/test/testimg.jpg';
 import TestIMG2 from './assets/test/diner.jpg';
@@ -57,7 +57,7 @@ export const App = () => {
           <InfiniteScroll />
         </div>
         <div className="screenContainer">
-          <HorizontalNav />
+          <VerticalNavDrawer />
         </div>
         <div className="screenContainer searchBar">
           <Card

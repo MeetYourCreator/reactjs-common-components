@@ -5,7 +5,7 @@ export { DatePicker } from './DatePicker/DatePicker';
 export { Image } from './Image/Image';
 export { InfiniteScroll } from './InfiniteScroll/InfiniteScroll';
 export { Input } from './Input/Input';
-export { HorizontalNav } from './HorizontalNav/HorizontalNav';
+export { VerticalNavDrawer } from './VerticalNavDrawer/VerticalNavDrawer';
 export { ShowModalBtn as Modal } from './Modal/ShowModalBtn';
 export { SearchBar } from './SearchBar/SearchBar';
 export { Slider } from './Slider/Slider';
