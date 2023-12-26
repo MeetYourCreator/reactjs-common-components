@@ -1,4 +1,4 @@
-.element-container {
+.vertical-nav-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -11,13 +11,13 @@
   border-radius: 0.25rem;
   font-size: 25px;
   background: white;
-  transform: translateX(100px);
+  transform: translateX(1000px);
   opacity: 0;
   transition: 150ms;
 }
 
 .element.show {
   transform: translateX(0);
-  transition: transform 1s ease-in-out;
+  transition: transform 1s cubic-bezier(1, 0.31, 0.82, 1.12);
   opacity: 1;
 }

@@ -5,5 +5,6 @@ export interface CardProps extends ComponentProps {
   cardImage?: any;
   cardImageAlt?: string;
   cardText?: string;
+  children?: any;
   cardFooter?: any;
 }

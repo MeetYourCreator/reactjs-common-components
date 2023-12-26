@@ -28,7 +28,7 @@ input {
   grid-template-columns: repeat(auto-fit, minmax(100px));
   /* grid-auto-rows: 1fr; */
   place-items: center;
-  gap: 1px;
+  gap: 10px;
   width: 100%;
   background-color: black;
 }

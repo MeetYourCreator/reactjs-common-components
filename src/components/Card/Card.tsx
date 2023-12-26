@@ -8,6 +8,7 @@ export const Card = ({
   cardImage,
   cardImageAlt,
   cardText,
+  children,
   cardFooter,
   styles,
 }: CardProps) => {
@@ -20,6 +21,7 @@ export const Card = ({
           {cardImage ? <Image src={cardImage} alt={cardImageAlt} /> : null}
         </div>
         <div className="cardText">{cardText}</div>
+        <div className="cardChildren"> {children}</div>
       </main>
       <footer className="cardFooter">{cardFooter}</footer>
     </div>
