@@ -6,6 +6,7 @@ export { Image } from './Image/Image';
 export { InfiniteScroll } from './InfiniteScroll/InfiniteScroll';
 export { Input } from './Input/Input';
 export { VerticalNavDrawer } from './VerticalNavDrawer/VerticalNavDrawer';
+export { Screen } from './Screen/Screen';
 export { ShowModalBtn as Modal } from './Modal/ShowModalBtn';
 export { SearchBar } from './SearchBar/SearchBar';
 export { Slider } from './Slider/Slider';
