@@ -16,13 +16,10 @@ import TestIMG2 from './assets/test/diner.jpg';
 import './App.css';
 
 export const App = () => {
-  const getClientY = (e: any) => {
-    console.log('e.clientY: ', e.ClientY);
-  };
   return (
     <>
       <section className="appContainer">
-        <div onScroll={getClientY} className="screenContainer panels">
+        <div className="screenContainer panels">
           <SplitViewPanels
             leftPanel={<div>Left Panel Content</div>}
             rightPanel={<div>Right Panel Content</div>}
