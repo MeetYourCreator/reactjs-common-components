@@ -16,7 +16,7 @@ export const VerticalNavDrawer = () => {
         //location of the intersection showElementObserver on screen
         rootMargin: '0px',
         //how much of the element has to be touching the intersection point from none to all (0-1)
-        threshold: 1,
+        threshold: 0.5,
       }
     );
 
