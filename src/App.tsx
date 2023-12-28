@@ -7,14 +7,16 @@ import { Modal } from './components/';
 
 import { DatePicker } from './components';
 import { Toggle } from './components';
-
+import { SearchBar } from './components/';
+import { Card } from './components/';
+import { Image } from './components';
+import { placeholderArray } from './utils';
 import { Input } from './components/';
 
-import { InfiniteScroll } from './components/';
-import { Card } from './components/';
 import { Slider } from './components/';
-import { SearchBar } from './components/';
-import { placeholderArray } from './utils';
+
+import { InfiniteScroll } from './components/';
+
 import TestIMG from './assets/test/testimg.jpg';
 import TestIMG2 from './assets/test/diner.jpg';
 import './App.css';
@@ -31,6 +33,10 @@ export const App = () => {
         <Modal />
         <DatePicker />
         <Toggle />
+        <SearchBar searchBarData={placeholderArray} />
+        <Card>
+          <Image src={TestIMG2} />
+        </Card>
       </Screen>
     </>
   );
