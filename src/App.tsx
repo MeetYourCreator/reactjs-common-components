@@ -10,15 +10,14 @@ import { Toggle } from './components';
 import { SearchBar } from './components/';
 import { Card } from './components/';
 import { Image } from './components';
-import { placeholderArray } from './utils';
-import { Input } from './components/';
-
-import { Slider } from './components/';
-
-import { InfiniteScroll } from './components/';
-
-import TestIMG from './assets/test/testimg.jpg';
 import TestIMG2 from './assets/test/diner.jpg';
+import { placeholderArray } from './utils';
+
+import { Input } from './components/';
+import { Slider } from './components/';
+import { InfiniteScroll } from './components/';
+import TestIMG from './assets/test/testimg.jpg';
+
 import './App.css';
 
 export const App = () => {
