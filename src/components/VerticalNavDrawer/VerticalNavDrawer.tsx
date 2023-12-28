@@ -16,7 +16,7 @@ export const VerticalNavDrawer = () => {
         //location of the intersection showElementObserver on screen
         rootMargin: '0px',
         //how much of the element has to be touching the intersection point from none to all (0-1)
-        threshold: 1,
+        threshold: 0.5,
       }
     );
 
@@ -35,25 +35,37 @@ export const VerticalNavDrawer = () => {
     >
       <div className="element">
         <Card
-          styles={{ border: '10px solid green', color: 'white' }}
+          styles={{
+            border: '10px solid green',
+            color: 'white',
+            width: '15rem',
+          }}
           cardText={'Card 0'}
         />
       </div>
       <div className="element">
         <Card
-          styles={{ border: '10px solid yellow', color: 'white' }}
+          styles={{
+            border: '10px solid yellow',
+            color: 'white',
+            width: '15rem',
+          }}
           cardText={'Card 1'}
         />
       </div>
       <div className="element">
         <Card
-          styles={{ border: '10px solid blue', color: 'white' }}
+          styles={{ border: '10px solid blue', color: 'white', width: '15rem' }}
           cardText={'Card 2'}
         />
       </div>
       <div className="element">
         <Card
-          styles={{ border: '10px solid black', color: 'white' }}
+          styles={{
+            border: '10px solid black',
+            color: 'white',
+            width: '15rem',
+          }}
           cardText={'Card 3'}
         />
       </div>

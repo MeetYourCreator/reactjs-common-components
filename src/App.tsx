@@ -1,78 +1,42 @@
 import React, { useState, useEffect } from 'react';
 
+import { Screen } from './components/';
 import { SplitViewPanels } from './components/';
+import { VerticalNavDrawer } from './components/';
 import { Modal } from './components/';
-import { SearchBar } from './components/';
+
 import { DatePicker } from './components';
 import { Toggle } from './components';
+import { SearchBar } from './components/';
+import { Card } from './components/';
+import { Image } from './components';
+import TestIMG2 from './assets/test/diner.jpg';
+import { placeholderArray } from './utils';
+
 import { Input } from './components/';
 import { Slider } from './components/';
 import { InfiniteScroll } from './components/';
-import { Card } from './components/';
-import { VerticalNavDrawer } from './components/';
-import { placeholderArray } from './utils';
 import TestIMG from './assets/test/testimg.jpg';
-import TestIMG2 from './assets/test/diner.jpg';
+
 import './App.css';
 
 export const App = () => {
-  const getClientY = (e: any) => {
-    console.log('e.clientY: ', e.ClientY);
-  };
   return (
     <>
-      <section className="appContainer">
-        <div onScroll={getClientY} className="screenContainer panels">
-          <SplitViewPanels
-            leftPanel={<div>Left Panel Content</div>}
-            rightPanel={<div>Right Panel Content</div>}
-          />
-        </div>
-        <div className="screenContainer datepicker">
-          <DatePicker />
-        </div>
-        <div className="screenContainer modal">
-          <Modal />
-        </div>
-        <div className="screenContainer searchBar">
-          <SearchBar searchBarData={placeholderArray} />
-        </div>
-        <div className="screenContainer toggle">
-          <Toggle />
-        </div>
-        <div className="screenContainer searchBar">
-          <Input type="text" />
-        </div>
-        <div className="screenContainer">
-          <Slider
-            urlArray={[
-              <Toggle />,
-              <Input type="text" />,
-              <img src={TestIMG} alt="testIMG" />,
-              <img src={TestIMG2} alt="testIMG2" />,
-            ]}
-          />
-        </div>
-        <div className="screenContainer searchBar">
-          <InfiniteScroll />
-        </div>
-        <div className="screenContainer">
-          <VerticalNavDrawer />
-        </div>
-        <div className="screenContainer searchBar">
-          <Card
-            cardHeader="title"
-            // cardImage={TestIMG2}
-            cardText="Main text"
-            cardFooter="footer"
-            styles={{
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'blue',
-            }}
-          />
-        </div>
-      </section>
+      <Screen>
+        <SplitViewPanels
+          leftPanel={<div>Left Panel Content</div>}
+          rightPanel={<div>Right Panel Content</div>}
+        />
+        <VerticalNavDrawer />
+        <Modal />
+        <DatePicker />
+        <Toggle />
+        <SearchBar searchBarData={placeholderArray} />
+        <Card>
+          <Image src={TestIMG2} />
+        </Card>
+      </Screen>
     </>
   );
 };

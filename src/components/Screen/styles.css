@@ -1,0 +1,13 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100vw;
+  background-color: black;
+}
+
+.screenContainer {
+  height: 100vh;
+  background-color: white;
+  /* scroll-snap-align: start; */
+}
