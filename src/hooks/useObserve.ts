@@ -4,16 +4,14 @@ import { useObserveInput } from './types';
 export const useObserve = (
   toggleSelector: string,
   targetSelector: string,
-  rootMarginValue: string,
-  thresholdValue: number
+  rootMarginValue?: string,
+  thresholdValue?: number
 ) => {
   const ref = useRef<any>(null);
 
   useEffect(() => {
-    //create Intersection Observer
     const observer = new IntersectionObserver(
       ([entry]) => {
-        //console.log('entry', entry);
         entry.target.classList.toggle(toggleSelector, entry.isIntersecting);
       },
       {
