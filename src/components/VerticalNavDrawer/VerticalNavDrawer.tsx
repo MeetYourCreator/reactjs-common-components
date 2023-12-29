@@ -1,31 +1,9 @@
-import React, { useState, useRef, useEffect, RefObject } from 'react';
+import { useObserve } from '../../hooks/useObserve';
 import { Card } from '../index';
 import './styles.css';
 
 export const VerticalNavDrawer = () => {
-  const ref = useRef<any>(null);
-
-  useEffect(() => {
-    //create Intersection Observer
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        //console.log('entry', entry);
-        entry.target.classList.toggle('show', entry.isIntersecting);
-      },
-      {
-        //location of the intersection showElementObserver on screen
-        rootMargin: '0px',
-        //how much of the element has to be touching the intersection point from none to all (0-1)
-        threshold: 0.5,
-      }
-    );
-
-    const elements = ref.current.querySelectorAll('.element');
-    elements.forEach((element: any) => {
-      observer.observe(element);
-    });
-    elements.forEach((element: any) => element.classList.toggle('show'));
-  }, []);
+  const ref = useObserve('show', '.element', '0px', 0.5);
 
   return (
     <article
