@@ -1,5 +1,4 @@
 import { useRef, useEffect } from 'react';
-import { useObserveInput } from './types';
 
 export const useObserve = (
   toggleSelector: string,

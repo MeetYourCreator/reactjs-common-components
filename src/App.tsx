@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Screen } from './components/';
+import { AnimationElement, Screen } from './components/';
 import { SplitViewPanels } from './components/';
 import { VerticalNavDrawer } from './components/';
 import { Modal } from './components/';
@@ -36,6 +36,12 @@ export const App = () => {
         <Card>
           <Image src={TestIMG2} />
         </Card>
+
+        <AnimationElement
+          toggleSelector="show"
+          targetSelector=".element"
+          thresholdValue={0.5}
+        />
       </Screen>
     </>
   );
