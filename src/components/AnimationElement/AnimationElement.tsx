@@ -22,6 +22,16 @@ export const AnimationElement = ({
       <div id={elementId} className="element">
         <Card>R</Card>
       </div>
+      <div className="card">
+        <Card
+          styles={{
+            border: '10px solid green',
+            color: 'white',
+            width: '15rem',
+          }}
+          cardText={'Card 0'}
+        />
+      </div>
     </article>
   );
 };

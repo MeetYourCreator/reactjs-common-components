@@ -2,21 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1 rem;
+  gap: 10 rem;
+  background-color: red;
 }
 
-.element {
+.card {
   padding: 0.5rem;
-  /* border: 1px solid transparent; */
+  margin: 0.1rem;
   border-radius: 0.25rem;
   font-size: 25px;
-  background: white;
-  transform: translateX(100px);
+  background-color: black;
+  transform: translate(100px);
   opacity: 0;
 }
 
-.element.show {
-  transform: translateX(0);
+.card.show {
+  transform: translate(0px, -30px);
   transition: transform 1s ease-in-out;
   opacity: 1;
 }

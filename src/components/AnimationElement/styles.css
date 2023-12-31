@@ -10,12 +10,12 @@
   border-radius: 0.25rem;
   font-size: 25px;
   background: white;
-  transform: translateX(100px);
+  transform: translate(100px);
   opacity: 0;
 }
 
 .element.show {
-  transform: translateX(0);
+  transform: translate(0px, 40px);
   transition: transform 1s ease-in-out;
   opacity: 1;
 }

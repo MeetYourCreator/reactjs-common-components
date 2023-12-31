@@ -3,7 +3,7 @@ import { Card } from '../index';
 import './styles.css';
 
 export const VerticalNavDrawer = () => {
-  const ref = useObserve('show', '.element', '0px', 0.5);
+  const ref = useObserve('show', '.card', '0px', 0.5);
 
   return (
     <article
@@ -11,7 +11,7 @@ export const VerticalNavDrawer = () => {
       className="vertical-nav-container"
       onWheel={(e) => console.log(e.deltaY)}
     >
-      <div className="element">
+      <div className="card">
         <Card
           styles={{
             border: '10px solid green',
@@ -21,7 +21,7 @@ export const VerticalNavDrawer = () => {
           cardText={'Card 0'}
         />
       </div>
-      <div className="element">
+      <div className="card">
         <Card
           styles={{
             border: '10px solid yellow',
@@ -31,16 +31,16 @@ export const VerticalNavDrawer = () => {
           cardText={'Card 1'}
         />
       </div>
-      <div className="element">
+      <div className="card">
         <Card
           styles={{ border: '10px solid blue', color: 'white', width: '15rem' }}
           cardText={'Card 2'}
         />
       </div>
-      <div className="element">
+      <div className="card">
         <Card
           styles={{
-            border: '10px solid black',
+            border: '10px solid purple',
             color: 'white',
             width: '15rem',
           }}
