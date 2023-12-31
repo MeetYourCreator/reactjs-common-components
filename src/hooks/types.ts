@@ -21,10 +21,3 @@ export interface UseAxiosResponse {
   request: any;
   status: number;
 }
-
-export interface useObserveInput {
-  toggleSelector: string;
-  targetSelector: string;
-  rootMarginValue?: string;
-  thresholdValue?: number;
-}

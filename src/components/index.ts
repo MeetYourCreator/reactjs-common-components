@@ -1,3 +1,4 @@
+export { AnimationElement } from './AnimationElement/AnimationElement';
 export { Button } from './Button/Button';
 export { Calendar } from './Calendar/Calendar';
 export { Card } from './Card/Card';
