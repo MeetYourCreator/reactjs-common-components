@@ -19,10 +19,10 @@ export const AnimationElement = ({
   const elementId = useId();
   return (
     <article ref={ref}>
-      <div id={elementId} className="element">
+      <div id={elementId} className={targetSelector}>
         <Card>R</Card>
       </div>
-      <div className="card">
+      <div className={targetSelector}>
         <Card
           styles={{
             border: '10px solid green',
