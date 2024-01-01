@@ -15,7 +15,7 @@
 }
 
 .element.show {
-  transform: translate(0px, 40px);
+  transform: translate(0px, -40px) rotate(20deg);
   transition: transform 1s ease-in-out;
   opacity: 1;
 }

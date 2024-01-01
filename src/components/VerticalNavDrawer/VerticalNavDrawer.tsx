@@ -1,9 +1,20 @@
 import { useObserve } from '../../hooks/useObserve';
 import { Card } from '../index';
+import { UseObserveInput } from '../../hooks/types';
 import './styles.css';
 
-export const VerticalNavDrawer = () => {
-  const ref = useObserve('show', '.card', '0px', 0.5);
+export const VerticalNavDrawer = ({
+  toggleSelector,
+  targetSelector,
+  rootMarginValue,
+  thresholdValue,
+}: UseObserveInput) => {
+  const ref = useObserve(
+    toggleSelector,
+    targetSelector,
+    rootMarginValue,
+    thresholdValue
+  );
 
   return (
     <article

@@ -1,7 +1,7 @@
 import React, { useId } from 'react';
 import { useObserve } from '../../hooks/useObserve';
 import { Card } from '../index';
-import { AnimationElementProps } from './types';
+import { UseObserveInput } from '../../hooks/types';
 import './styles.css';
 
 export const AnimationElement = ({
@@ -9,7 +9,7 @@ export const AnimationElement = ({
   targetSelector,
   rootMarginValue,
   thresholdValue,
-}: AnimationElementProps) => {
+}: UseObserveInput) => {
   const ref = useObserve(
     toggleSelector,
     targetSelector,
@@ -19,10 +19,10 @@ export const AnimationElement = ({
   const elementId = useId();
   return (
     <article ref={ref}>
-      <div id={elementId} className={targetSelector}>
+      <div id={elementId} className="element">
         <Card>R</Card>
       </div>
-      <div className={targetSelector}>
+      <div className="element">
         <Card
           styles={{
             border: '10px solid green',
