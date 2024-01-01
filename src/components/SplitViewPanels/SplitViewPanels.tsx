@@ -24,7 +24,6 @@ const LeftPanel: React.FunctionComponent<LeftPanelProps> = ({
 
 export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
   leftPanel,
-  
   rightPanel,
   className,
 }) => {
