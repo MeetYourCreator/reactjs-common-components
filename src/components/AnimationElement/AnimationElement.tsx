@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import React, { useId, useState, useEffect } from 'react';
 import { useObserve } from '../../hooks/useObserve';
 import { Card } from '../index';
 import { UseObserveInput } from '../../hooks/types';
@@ -18,7 +18,7 @@ export const AnimationElement = ({
   );
   const elementId = useId();
   return (
-    <article ref={ref}>
+    <article ref={ref} onWheel={(e) => console.log(e.deltaY)}>
       <div id={elementId} className="element">
         <Card>R</Card>
       </div>
