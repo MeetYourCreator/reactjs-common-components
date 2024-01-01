@@ -28,7 +28,11 @@ export const App = () => {
           leftPanel={<div>Left Panel Content</div>}
           rightPanel={<div>Right Panel Content</div>}
         />
-        <VerticalNavDrawer />
+        <VerticalNavDrawer
+          toggleSelector="show"
+          targetSelector=".card"
+          thresholdValue={0.5}
+        />
         <Modal />
         <DatePicker />
         <Toggle />

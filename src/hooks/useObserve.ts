@@ -6,7 +6,7 @@ export const useObserve = (
   rootMarginValue?: string,
   thresholdValue?: number
 ) => {
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,14 +20,16 @@ export const useObserve = (
         threshold: thresholdValue,
       }
     );
+    if (ref.current) {
+      const elements = ref.current.querySelectorAll(targetSelector);
+      elements.forEach((element: any) => {
+        observer.observe(element);
+      });
 
-    const elements = ref.current.querySelectorAll(targetSelector);
-    elements.forEach((element: any) => {
-      observer.observe(element);
-    });
-    elements.forEach((element: any) =>
-      element.classList.toggle(toggleSelector)
-    );
+      elements.forEach((element: any) =>
+        element.classList.toggle(toggleSelector)
+      );
+    }
   }, [toggleSelector, targetSelector, rootMarginValue, thresholdValue]);
 
   return ref;
