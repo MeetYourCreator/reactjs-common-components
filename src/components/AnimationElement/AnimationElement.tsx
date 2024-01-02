@@ -1,4 +1,4 @@
-import React, { useId, useRef, useState, useEffect } from 'react';
+import React from 'react';
 import { useObserve } from '../../hooks/useObserve';
 import { Card } from '../index';
 import { UseObserveInput } from '../../hooks/types';
@@ -18,10 +18,7 @@ export const AnimationElement = ({
   );
 
   return (
-    <article
-      ref={ref}
-      // onWheel={onWheel}
-    >
+    <article ref={ref}>
       <div className="element">
         <Card>R</Card>
       </div>

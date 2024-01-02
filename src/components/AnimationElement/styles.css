@@ -7,23 +7,16 @@
   }
 }
 
-.vertical-nav-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1 rem;
-}
-
 .element {
   padding: 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 25px;
+  border: 1px black solid;
+  font-size: 35px;
   background: white;
   opacity: 0;
 }
 
 .element.show {
-  animation: slideInLeft 1s ease-in-out 1s 1 normal none;
+  animation: slideInLeft 3s ease-in-out 1s 1 normal none;
   /* animation-name: slideInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
