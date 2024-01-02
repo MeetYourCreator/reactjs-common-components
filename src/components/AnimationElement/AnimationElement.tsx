@@ -19,6 +19,7 @@ export const AnimationElement = ({
     rootMarginValue,
     thresholdValue
   );
+
   const childRef = useRef<HTMLDivElement>(null);
 
   const elementId = useId();
@@ -37,12 +38,14 @@ export const AnimationElement = ({
       child.style.transform = `translateX(-${scrollYPosition}px)`;
     }
   };
+
   useEffect(() => {
     document.addEventListener('onwheel', onWheel);
     return () => {
       document.removeEventListener('onwheel', onWheel);
     };
   });
+
   return (
     <article ref={ref} onWheel={onWheel}>
       <div id={elementId} className="element" ref={childRef}>
