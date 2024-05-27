@@ -23,20 +23,6 @@ input {
   border: 1px solid #43464b;
 }
 
-.appContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100vw;
-  background-color: black;
-}
-
-.screenContainer {
-  height: 100vh;
-  background-color: white;
-  /* scroll-snap-align: start; */
-}
-
 .datepicker {
   display: grid;
   justify-items: center;
