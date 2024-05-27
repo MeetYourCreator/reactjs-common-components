@@ -1,16 +1,14 @@
 name: build
-on: push
+on: [push]
 jobs:
   build:
+    name: checkout repo
     runs-on: ubuntu-latest
-    runs:
-      using: 'node20'
     steps:
-      - name: checkout repo
-        uses: actions/checkout@v3
-      - name: use node.js
+      - uses: actions/checkout@v3
+      name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'
+          node-version: 20.x
       - run: npm install
       - run: npm run build
