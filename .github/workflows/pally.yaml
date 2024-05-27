@@ -1,14 +1,13 @@
 name: pa11y
-on: [push]
+on:
+  push:
+    branches: [master]
 jobs:
   pa11y:
-    name: pally
-    needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repo
-        uses: actions/checkout@v4
-      - name: Use node.js
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
