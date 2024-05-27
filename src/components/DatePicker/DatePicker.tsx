@@ -21,6 +21,7 @@ export const DatePicker = ({ styles }: ComponentProps) => {
             }}
           >
             <Input name='selected-date' type='text' onFocus={setIsVisible} value={selectedDate} />
+            <button type='submit'>Submit</button>
           </form>
           <div className="dropdownContainer">{isValue && <Calendar />}</div>
         </div>

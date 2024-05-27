@@ -9,7 +9,7 @@ import './styles.css';
 
 export const Calendar = ({ styles }: ComponentProps) => {
   const [nav, setNav] = useState<number>(0);
-  const [, setSelectedDate] = useContext<any>(DateContext);
+  const [selectedDate, setSelectedDate] = useContext<any>(DateContext);
   const { days, dateDisplay } = useDate(nav);
 
   const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -27,10 +27,10 @@ export const Calendar = ({ styles }: ComponentProps) => {
         })}
       </header>
       <div className="calendarBody">
-        {days.map((date: DateObj, index: number) => {
+        {days.map((date: DateObj) => {
           return (
             <Day
-              key={index}
+              key={selectedDate}
               date={date}
               onSelectedDate={() => setSelectedDate(date.date)}
             />

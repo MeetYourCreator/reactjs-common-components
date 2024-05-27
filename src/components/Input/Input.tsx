@@ -22,14 +22,14 @@ export const Input = ({
 }: InputProps) => {
   labelId = useId();
 
-  console.log(labelId);
   return (
     <>
-      <label htmlFor={labelId}>{name}</label>
+      <label htmlFor={labelId}></label>
       <input
         id={labelId}
         type={type}
         name={name}
+        value={value}
         onChange={onChange}
         onFocus={onFocus}
         defaultValue={defaultValue}
