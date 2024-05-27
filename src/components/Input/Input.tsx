@@ -7,10 +7,11 @@ export const Input = ({
   labelId,
   name,
   value,
+  onChange,
+  onFocus,
   defaultValue,
   checked,
   defaultChecked,
-  onChange,
   autoComplete,
   autoFocus,
   disabled,
@@ -30,10 +31,11 @@ export const Input = ({
         type={type}
         name={name}
         value={value}
+        onChange={onChange}
+        onFocus={onFocus}
         defaultValue={defaultValue}
         checked={checked}
         defaultChecked={defaultChecked}
-        onChange={onChange}
         autoComplete={autoComplete}
         autoFocus={autoFocus}
         disabled={disabled}

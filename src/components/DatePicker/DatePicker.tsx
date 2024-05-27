@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { DateContext } from '../../context';
-import { Calendar } from '../index';
+import { Input, Calendar } from '../index';
 import { useBoolean } from '../../hooks/useBoolean';
 import { ComponentProps } from '../types';
 import './styles.css';
@@ -20,7 +20,7 @@ export const DatePicker = ({ styles }: ComponentProps) => {
               setSelectedDate('');
             }}
           >
-            <input onFocus={setIsVisible} value={selectedDate} />
+            <Input name='selected-date' type='text' onFocus={setIsVisible} value={selectedDate} />
           </form>
           <div className="dropdownContainer">{isValue && <Calendar />}</div>
         </div>

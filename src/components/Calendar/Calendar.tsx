@@ -3,10 +3,11 @@ import { DateContext } from '../../context';
 import { Day } from './Day';
 import { Header } from './Header';
 import { useDate } from '../../hooks/useDate';
-import { CalendarProps, DateObj } from './types';
+import { DateObj } from './types';
+import { ComponentProps } from '../types';
 import './styles.css';
 
-export const Calendar = ({ styles }: CalendarProps) => {
+export const Calendar = ({ styles }: ComponentProps) => {
   const [nav, setNav] = useState<number>(0);
   const [selectedDate, setSelectedDate] = useContext<any>(DateContext);
   const { days, dateDisplay } = useDate(nav);

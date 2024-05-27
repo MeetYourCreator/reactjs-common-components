@@ -1,21 +1,28 @@
-.vertical-nav-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1 rem;
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translate(100px, 40px);
+  }
 }
 
 .element {
   padding: 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 25px;
+  border: 1px black solid;
+  font-size: 35px;
   background: white;
-  transform: translate(100px);
   opacity: 0;
 }
 
 .element.show {
-  transform: translate(0px, 40px);
-  transition: transform 1s ease-in-out;
+  animation: slideInLeft 3s ease-in-out 1s 1 normal none;
+  /* animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none; */
   opacity: 1;
 }

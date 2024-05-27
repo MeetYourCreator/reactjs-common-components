@@ -1,3 +1,4 @@
+import React from 'react';
 import { ComponentProps } from '../types';
 
 export interface InputProps extends ComponentProps {
@@ -8,7 +9,8 @@ export interface InputProps extends ComponentProps {
   defaultValue?: any;
   checked?: boolean;
   defaultChecked?: boolean;
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   autoComplete?: string;
   autoFocus?: boolean;
   disabled?: boolean;
