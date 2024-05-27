@@ -34,7 +34,7 @@ export const App = () => {
         <Toggle />
         <SearchBar searchBarData={placeholderArray} />
         <Card>
-          <Image src={TestIMG2} />
+          <Image src={TestIMG2} alt='Test IMG 2' />
         </Card>
 
         <AnimationElement
