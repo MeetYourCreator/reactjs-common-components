@@ -9,7 +9,7 @@ import './styles.css';
 
 export const Calendar = ({ styles }: ComponentProps) => {
   const [nav, setNav] = useState<number>(0);
-  const [selectedDate, setSelectedDate] = useContext<any>(DateContext);
+  const [, setSelectedDate] = useContext<any>(DateContext);
   const { days, dateDisplay } = useDate(nav);
 
   const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

@@ -8,7 +8,7 @@ export const SearchBar = ({ searchBarData }: SearchBarData) => {
     query: '',
     queries: [],
   });
-  const [formData, setFormData] = useState<FormDataOutput>({
+  const [, setFormData] = useState<FormDataOutput>({
     searchValue: inputField.query,
   });
   // console.log('inputField: ', inputField);

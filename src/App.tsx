@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react';
-
-import { AnimationElement, Screen, SplitViewPanels, VerticalNavDrawer, Modal, DatePicker, Toggle, SearchBar, Card, Image } from './components/';
-
+import {
+  AnimationElement,
+  Screen,
+  SplitViewPanels,
+  VerticalNavDrawer,
+  Modal,
+  DatePicker,
+  Toggle,
+  SearchBar,
+  Card,
+  Image
+} from './components/';
 
 import TestIMG2 from './assets/test/diner.jpg';
 import { placeholderArray } from './utils';
-
-
-import { Slider } from './components/';
-import { InfiniteScroll } from './components/';
-import TestIMG from './assets/test/testimg.jpg';
 
 import './App.css';
 

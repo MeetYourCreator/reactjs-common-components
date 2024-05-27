@@ -5,10 +5,9 @@ import RightArrow from './assets/right-arrow.png';
 import { SliderProps } from './types';
 import './styles.css';
 
-import { detectTrackPad } from '../../utils';
 export const Slider = ({ urlArray }: SliderProps) => {
   const [urlIndex, setUrlIndex] = useState(0);
-  const [hover, setHover] = useState<undefined | string>();
+  const [, setHover] = useState<undefined | string>();
   const onHover = (e: any) => {
     e.stopPropagation();
     setHover((e.target.style.background = 'rgb(0,0,0,.2)'));
