@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="appContainer"
+    id=":r0:"
+  >
+    <div
+      class="screenContainer panels"
+    >
+      <section
+        class="splitView "
+      >
+        <div>
+          <div>
+            Left Panel Content
+          </div>
+        </div>
+        <div
+          class="dividerHitbox"
+        >
+          <div
+            class="divider"
+          >
+            <div>
+              :::
+            </div>
+            <div>
+              :::
+            </div>
+            <div>
+              :::
+            </div>
+          </div>
+        </div>
+        <div
+          class="rightPanel"
+        >
+          <div>
+            Right Panel Content
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      class="screenContainer panels"
+    >
+      <article
+        class="vertical-nav-container"
+      >
+        <div
+          class="card show"
+        >
+          <div
+            class="cardContainer"
+            id=":r1:"
+            style="border: 10px solid green; color: white; width: 15rem;"
+          >
+            <header />
+            <main
+              class="cardContent"
+            >
+              <div
+                class="cardImage"
+              />
+              <div
+                class="cardText"
+              >
+                Card 0
+              </div>
+              <div
+                class="cardChildren"
+              >
+                 
+              </div>
+            </main>
+            <footer
+              class="cardFooter"
+            />
+          </div>
+        </div>
+        <div
+          class="card show"
+        >
+          <div
+            class="cardContainer"
+            id=":r2:"
+            style="border: 10px solid yellow; color: white; width: 15rem;"
+          >
+            <header />
+            <main
+              class="cardContent"
+            >
+              <div
+                class="cardImage"
+              />
+              <div
+                class="cardText"
+              >
+                Card 1
+              </div>
+              <div
+                class="cardChildren"
+              >
+                 
+              </div>
+            </main>
+            <footer
+              class="cardFooter"
+            />
+          </div>
+        </div>
+        <div
+          class="card show"
+        >
+          <div
+            class="cardContainer"
+            id=":r3:"
+            style="border: 10px solid blue; color: white; width: 15rem;"
+          >
+            <header />
+            <main
+              class="cardContent"
+            >
+              <div
+                class="cardImage"
+              />
+              <div
+                class="cardText"
+              >
+                Card 2
+              </div>
+              <div
+                class="cardChildren"
+              >
+                 
+              </div>
+            </main>
+            <footer
+              class="cardFooter"
+            />
+          </div>
+        </div>
+        <div
+          class="card show"
+        >
+          <div
+            class="cardContainer"
+            id=":r4:"
+            style="border: 10px solid purple; color: white; width: 15rem;"
+          >
+            <header />
+            <main
+              class="cardContent"
+            >
+              <div
+                class="cardImage"
+              />
+              <div
+                class="cardText"
+              >
+                Card 3
+              </div>
+              <div
+                class="cardChildren"
+              >
+                 
+              </div>
+            </main>
+            <footer
+              class="cardFooter"
+            />
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="screenContainer panels"
+    >
+      <section
+        class="dialogContainer"
+      >
+        <button
+          class="button"
+          id=":r5:"
+          style="position: absolute; z-index: 0;"
+        >
+          Open Modal
+        </button>
+      </section>
+    </div>
+    <div
+      class="screenContainer panels"
+    >
+      <div
+        class="datePickerContainer"
+      >
+        <form>
+          <label
+            for=":r6:"
+          >
+            selected-date
+          </label>
+          <input
+            id=":r6:"
+            name="selected-date"
+            type="text"
+            value=""
+          />
+        </form>
+        <div
+          class="dropdownContainer"
+        />
+      </div>
+    </div>
+    <div
+      class="screenContainer panels"
+    >
+      <input
+        class="toggle"
+        id=":r7:"
+        type="checkbox"
+      />
+      <label
+        for=":r7:"
+      />
+    </div>
+    <div
+      class="screenContainer panels"
+    >
+      <form
+        class="formContainer"
+      >
+        <label
+          for=""
+        />
+        <input
+          class="searchBar"
+          type="select"
+          value=""
+        />
+      </form>
+    </div>
+    <div
+      class="screenContainer panels"
+    >
+      <div
+        class="cardContainer"
+        id=":r8:"
+      >
+        <header />
+        <main
+          class="cardContent"
+        >
+          <div
+            class="cardImage"
+          />
+          <div
+            class="cardText"
+          />
+          <div
+            class="cardChildren"
+          >
+             
+            <img
+              src="diner.jpg"
+            />
+          </div>
+        </main>
+        <footer
+          class="cardFooter"
+        />
+      </div>
+    </div>
+    <div
+      class="screenContainer panels"
+    >
+      <article>
+        <div
+          class="element show"
+        >
+          <div
+            class="cardContainer"
+            id=":r9:"
+          >
+            <header />
+            <main
+              class="cardContent"
+            >
+              <div
+                class="cardImage"
+              />
+              <div
+                class="cardText"
+              />
+              <div
+                class="cardChildren"
+              >
+                 R
+              </div>
+            </main>
+            <footer
+              class="cardFooter"
+            />
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</DocumentFragment>
+`;

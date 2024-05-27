@@ -30,7 +30,6 @@ export const Input = ({
         id={labelId}
         type={type}
         name={name}
-        value={value}
         onChange={onChange}
         onFocus={onFocus}
         defaultValue={defaultValue}

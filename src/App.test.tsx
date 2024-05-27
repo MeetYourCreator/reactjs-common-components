@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders SplitViewPanels component', () => {
   render(<App />);
-  const divider = screen.getByText(/:::/i);
+  const divider = screen.getByRole('separator');
   expect(divider).toBeInTheDocument();
 });

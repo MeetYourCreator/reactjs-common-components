@@ -11,13 +11,19 @@ export const Modal: React.FunctionComponent<ModalProps> = ({
   styles,
 }) => {
   return (
-    <div className="modalContainer" style={styles}>
+    <section
+      role='alertdialog'
+      aria-labelledby='modal'
+      aria-describedby='dialogDesc'
+      className="modalContainer"
+      style={styles}
+    >
       <Card
         cardHeader={modalHeader}
         cardImage={modalImage}
         cardText={modalText}
         cardFooter={<Button onClick={setIsModalOpen} name="Close" />}
       />
-    </div>
+    </section>
   );
 };

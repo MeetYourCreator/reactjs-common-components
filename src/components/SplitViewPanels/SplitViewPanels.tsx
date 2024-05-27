@@ -103,7 +103,10 @@ export const SplitViewPanels: React.FunctionComponent<SplitViewPanelsProps> = ({
         onTouchStart={onTouchStart}
         onMouseUp={onMouseUp}
       >
-        <div className="divider">
+        <div
+          role='separator'
+          aria-labelledby='divider'
+          className="divider">
           <div>:::</div>
           <div>:::</div>
           <div>:::</div>

@@ -24,12 +24,12 @@ export const App = () => {
           leftPanel={<div>Left Panel Content</div>}
           rightPanel={<div>Right Panel Content</div>}
         />
+        <Modal />
         <VerticalNavDrawer
           toggleSelector="show"
           targetSelector=".card"
           thresholdValue={0.5}
         />
-        <Modal />
         <DatePicker />
         <Toggle />
         <SearchBar searchBarData={placeholderArray} />
