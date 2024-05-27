@@ -1,5 +1,8 @@
-  test:
+  name: test
   on: [push]
+  jobs:
+    test:
+    name: unit-test
     needs: build
     runs-on: ubuntu-latest
     steps:
