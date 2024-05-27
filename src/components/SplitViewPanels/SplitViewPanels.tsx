@@ -1,6 +1,5 @@
 import React, { createRef, useEffect, useState } from 'react';
 import { SplitViewPanelsProps, LeftPanelProps } from './types';
-
 import './styles.css';
 
 const LeftPanel: React.FunctionComponent<LeftPanelProps> = ({
