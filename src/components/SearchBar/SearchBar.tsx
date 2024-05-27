@@ -8,7 +8,7 @@ export const SearchBar = ({ searchBarData }: SearchBarData) => {
     query: '',
     queries: [],
   });
-  const [, setFormData] = useState<FormDataOutput>({
+  const [formData, setFormData] = useState<FormDataOutput>({
     searchValue: inputField.query,
   });
   // console.log('inputField: ', inputField);
@@ -36,6 +36,10 @@ export const SearchBar = ({ searchBarData }: SearchBarData) => {
       <label htmlFor={inputField.query}></label>
       <input
         type="select"
+        aria-labelledby='select-input'
+        role='combobox'
+        aria-controls='dropdown'
+        aria-expanded={formData ? 'true' : 'false'}
         className="searchBar"
         value={inputField.query}
         onChange={handleChange}
