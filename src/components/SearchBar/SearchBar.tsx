@@ -32,36 +32,39 @@ export const SearchBar = ({ searchBarData }: SearchBarData) => {
   };
 
   return (
-    <form className="formContainer" onSubmit={handleSubmit}>
+    <form className='formContainer' onSubmit={handleSubmit}>
       <label htmlFor={inputField.query}></label>
-      <input
-        type="select"
-        aria-labelledby='select-input'
-        role='combobox'
-        aria-controls='dropdown'
-        aria-expanded={formData ? 'true' : 'false'}
-        className="searchBar"
-        value={inputField.query}
-        onChange={handleChange}
-      />
-      {inputField.query === '' ? (
-        inputField.query
-      ) : (
-        <div className="dropdown">
-          {inputField.queries?.map((query) => {
-            return (
-              <ul>
-                <li
-                  className="dropdownOption"
-                  onClick={() => setInputField({ query: query })}
-                >
-                  {query}
-                </li>
-              </ul>
-            );
-          })}
-        </div>
-      )}
+      <section className='inputContainer'>
+        <input
+          type="select"
+          aria-labelledby='select-input'
+          role='combobox'
+          aria-controls='dropdown'
+          aria-expanded={formData ? 'true' : 'false'}
+          className="searchBar"
+          value={inputField.query}
+          onChange={handleChange}
+        />
+        {inputField.query === '' ? (
+          inputField.query
+        ) : (
+          <div className="dropdown">
+            {inputField.queries?.map((query) => {
+              return (
+                <ul>
+                  <li
+                    className="dropdownOption"
+                    onClick={() => setInputField({ query: query })}
+                  >
+                    {query}
+                  </li>
+                </ul>
+              );
+            })}
+          </div>
+        )}
+      </section>
+      <button type='submit'>Submit</button>
     </form>
   );
 };
